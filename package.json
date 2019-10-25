@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "dev boilerplate",
   "main": "main.js",
+  "nodemonConfig": {
+    "ignore": ["tests/*", "scripts/*", "src/*"],
+    "delay": "2500"
+  },
   "scripts": {
     "babel": "npx babel src --out-dir dist",
     "build": "node ./scripts/build.js",
@@ -13,6 +17,7 @@
     "gzip": "echo zipa todos os arquivos da pasta dist/",
     "htm": "cp -Ri src/*.html src",
     "html": "copyfiles -u 1 src/**/*.html dist",
+    "nodemon": "nodemon ./dist localhost 8181",
     "css": "sass --style=compressed --embed-source-map --update src:dist",
     "sass": "sass --style=compressed --embed-source-map --update src:dist",
     "scss": "sass --style=compressed --embed-source-map --update src/index.scss dist/index.scss.css --color",
@@ -40,6 +45,7 @@
     "core-js": "^3.3.4",
     "gulp-uglify": "^3.0.2",
     "gulplog": "^1.0.0",
+    "jspdf": "^1.5.3",
     "lodash.assign": "^4.2.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -84,6 +90,7 @@
     "chokidar": "^3.2.2",
     "copyfiles": "^2.1.1",
     "eslint": "^6.5.1",
+    "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0-beta.2",
     "gulp-concat": "^2.6.1",
@@ -93,6 +100,7 @@
     "gulp-util": "^3.0.8",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.12.0",
+    "nodemon": "^1.19.4",
     "php-server": "^0.2.1",
     "rollup": "^1.25.2",
     "rollup-plugin-babel": "^4.3.3",
