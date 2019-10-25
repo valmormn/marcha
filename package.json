@@ -1,7 +1,7 @@
 {
   "name": "dev",
   "version": "1.0.0",
-  "description": "",
+  "description": "dev boilerplate",
   "main": "main.js",
   "scripts": {
     "babel": "npx babel src --out-dir dist",

@@ -1,4 +1,4 @@
-# play
+# dev
 
 browsify
 babel

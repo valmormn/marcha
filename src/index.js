@@ -30,7 +30,7 @@ const x = document.querySelector('#div');
 
 // }
 
-// app.f();
+app.f();
 
 export let dev = {
   style: style,

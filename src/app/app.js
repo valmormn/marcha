@@ -30,7 +30,7 @@ console.log('app.js');
 
 export let app = {
   f: ()=>{
-    console.log('inside add');
+    console.log('inside app.js!');
   }
 }
 
