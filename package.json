@@ -21,6 +21,7 @@
     "gulp": "gulp",
     "php": "copyfiles -u 1 src/*.php src/**/*.php dist",
     "php-serve-dist": "php -S localhost:17367 ./dist/",
+    "push": "git add . && git commit -am \"dev\" && git push",
     "rollup": "rollup -c",
     "serve": "http-server -o -p 7521 ./dist/",
     "serve-dist": "http-server -o -p 13790 ./dist/",
