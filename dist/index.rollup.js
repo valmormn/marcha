@@ -1,0 +1,1 @@
+!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?o(exports):"function"==typeof define&&define.amd?define(["exports"],o):o((e=e||self).play={})}(this,(function(e){"use strict";console.log("app.js");document.querySelector("#div"),console.log("inside add"),e.play=function(){console.log(foo)},Object.defineProperty(e,"__esModule",{value:!0})}));
