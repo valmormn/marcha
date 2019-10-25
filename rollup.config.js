@@ -31,10 +31,10 @@ import {
 
 // import fetch from 'node-fetch';
 
-// let graph = require("rollup-plugin-graph");
-// let graphOptions = {
-//   prune: true
-// };
+let graph = require("rollup-plugin-graph");
+let graphOptions = {
+  prune: true
+};
 
 export default {
   input: 'src/index.js',
@@ -68,11 +68,10 @@ export default {
       exclude: 'node_modules/**', // only transpile our source code
       babelrc: false,
       // presets: [['babel-preset-env', { modules: false }], 'stage-3', 'react'],
-      // presets: [['babel-preset-env']], //, { modules: false }], 'stage-3', 'react'
-      // presets: [['env', { modules: false }]],
+      presets: [['@babel/env', { modules: false }]],
       // plugins: ['external-helpers'],
       // externalHelpers: true,
-      // runtimeHelpers: true,
+      runtimeHelpers: true,
     }),
     uglify(),
     terser(), // minification
@@ -95,7 +94,7 @@ export default {
     //   //   cert: fs.readFileSync('keys/agent2-cert.pem')
     //   // }
     // }),
-    // graph(),
+    graph(),
     // dev('dist/', { port: 3021 }),
     // html({
     //   dest: "dist/",

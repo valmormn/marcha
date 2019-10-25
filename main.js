@@ -1,15 +1,14 @@
 // main.js
+
+// const chokidar = require('chokidar');
+// const exec = require('child_process');
+
+// var fs = require("fs");
+// var sass = require('node-sass');
+// var browserify = require("browserify");
+// var babelify = require("babelify");
+
 console.log('main');
-
-const chokidar = require('chokidar');
-const exec = require('child_process');
-
-var fs = require("fs");
-var sass = require('node-sass');
-var browserify = require("browserify");
-var babelify = require("babelify");
-
-console.log('dev');
 
 // browserify({
 //     debug: true
@@ -66,14 +65,14 @@ console.log('dev');
 //   }
 // });
 
-var copyfiles = require('copyfiles');
+// var copyfiles = require('copyfiles');
 // copyfiles([paths], opt, callback);
 // copyfiles(['src/', 'dist/']);
 
 
-let a = ()=>{
+let a = () => {
   console.log('ahhh eu to maluco');
-  
+  return
 }
 
 a();

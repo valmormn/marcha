@@ -1,4 +1,5 @@
 // index.js
+
 // require("@babel/register");
 // import React from 'react'
 // import ReactDOM from 'react-dom'
@@ -23,11 +24,16 @@ import { style } from './style/style.js';
 
 const x = document.querySelector('#div');
 
+// export let play = ()=>{
+//   console.log(foo);
+//   // logUnderscoreVersion();// rollup.config.js
 
-export let play = ()=>{
-  console.log(foo);
-  // logUnderscoreVersion();// rollup.config.js
+// }
 
+// app.f();
+
+export let dev = {
+  style: style,
+  app: app,
+  x: x
 }
-
-app.f();

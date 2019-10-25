@@ -2,8 +2,7 @@
 
 const presets = [
   [
-    // "@babel/preset-es2015",
-    // "@babel/preset-env",
+    // "@babel/preset-react",
     "@babel/env",
     {
       targets: {
@@ -14,7 +13,7 @@ const presets = [
         "browsers": ["last 6 versions"]
       },
       corejs: 3,
-      // modules: false,
+      modules: false,
       // useBuiltIns: "usage"
       useBuiltIns: "false"
     },
@@ -22,7 +21,7 @@ const presets = [
 ];
 
 const plugins = [
-  // ["@babel/transform-arrow-functions"],
+  ["@babel/transform-arrow-functions"],
   // ["@babel/plugin-transform-modules-umd"],
   // ["@babel/plugin-transform-arrow-functions", { "spec": true }],
   // ["@babel/external-helpers"],
@@ -37,8 +36,23 @@ const plugins = [
   // }, ]
 ];
 
-module.exports = {
+const overrides = [
+  // {     
+  //   test: ["./node_modules"],     
+  //   presets: [       
+  //     // config for node_modules     
+  //   ],   
+  // }, 
+  {
+    test: ["./tests"],     
+    presets: [
+      // config for tests
+    ],
+  }
+]
 
+module.exports = {
   presets,
-  plugins
+  plugins,
+  overrides
 };
