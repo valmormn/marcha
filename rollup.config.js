@@ -19,11 +19,11 @@ import {
 } from 'rollup-plugin-terser';
 // import copy from 'rollup-plugin-copy';
 // import sass from 'rollup-plugin-sass';
-// import scss from 'rollup-plugin-scss';
+import scss from 'rollup-plugin-scss';
 
 // import html from 'rollup-plugin-fill-html';
 
-// import dev from 'rollup-plugin-dev';
+import dev from 'rollup-plugin-dev';
 // import serve from 'rollup-plugin-serve';
 // import phpServer from 'rollup-plugin-php-server';
 // import browserSync from 'rollup-plugin-browsersync';
@@ -65,10 +65,11 @@ export default {
       { browser: true, }
     ),
     babel({
+      extensions: ['.js', '.jsx', '.ts'],
       exclude: 'node_modules/**', // only transpile our source code
       babelrc: false,
       // presets: [['babel-preset-env', { modules: false }], 'stage-3', 'react'],
-      presets: [['@babel/env', { modules: false }]],
+      presets: [['@babel/env', { loose: true, modules: false }]],
       // plugins: ['external-helpers'],
       // externalHelpers: true,
       runtimeHelpers: true,
@@ -76,7 +77,7 @@ export default {
     uglify(),
     terser(), // minification
     // sass(),
-    // scss({output: 'dist/index.rb.css'}), // ERROR - will output compiled styles to bundle.css,
+    scss({output: 'dist'}), // ERROR - will output compiled styles to bundle.css,
     // serve('dist'),
     // phpServer({
     // port: 17365

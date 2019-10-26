@@ -4,8 +4,12 @@
   "description": "dev boilerplate",
   "main": "main.js",
   "nodemonConfig": {
-    "ignore": ["tests/*", "scripts/*", "src/*"],
-    "delay": "2500"
+    "ignore": [
+      "tests/*",
+      "scripts/*",
+      "dist/*"
+    ],
+    "delay": "2000"
   },
   "scripts": {
     "babel": "npx babel src --out-dir dist",
@@ -16,44 +20,37 @@
     "etaporra": "npm run html & npm run css & npm run js &",
     "gzip": "echo zipa todos os arquivos da pasta dist/",
     "htm": "cp -Ri src/*.html src",
-    "html": "copyfiles -u 1 src/**/*.html dist",
+    "html": "copyfiles -u 1 src/**/*.html dist && copyfiles -u 1 src/*.html dist",
+    "md": "echo md files to html",
     "nodemon": "nodemon ./dist localhost 8181",
     "css": "sass --style=compressed --embed-source-map --update src:dist",
     "sass": "sass --style=compressed --embed-source-map --update src:dist",
     "scss": "sass --style=compressed --embed-source-map --update src/index.scss dist/index.scss.css --color",
     "dart": "sass --watch src:dist",
     "js": "rollup -c",
-    "gulp": "gulp",
-    "php": "copyfiles -u 1 src/*.php src/**/*.php dist",
-    "php-serve-dist": "php -S localhost:11567 ./dist/",
+    "gulp": "echo gulp",
+    "php": "copyfiles -u 1 src/*.php dist && copyfiles -u 1 src/**/*.php dist",
+    "php-serve-dist": "php -S localhost:10617 ./dist/",
     "push": "git add . && git commit -am \"dev\" && git push",
     "rollup": "rollup -c",
     "serve": "http-server -o -p 7672 ./dist/",
     "serve-dist": "http-server -o -p 12557 ./dist/",
     "start": "node ./main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "echo watch"
+    "watch": "echo watch",
+    "chokidar": "echo chokidar"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/register": "^7.6.2",
-    "@babel/runtime": "^7.6.3",
-    "@babel/runtime-corejs3": "^7.6.3",
     "bootstrap": "^4.3.1",
-    "core-js": "^3.3.4",
-    "gulp-uglify": "^3.0.2",
-    "gulplog": "^1.0.0",
+    "jquery": "^3.4.1",
     "jspdf": "^1.5.3",
-    "lodash.assign": "^4.2.0",
+    "popper.js": "^1.16.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "regenerator-runtime": "^0.13.3",
-    "underscore": "^1.9.1",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0",
-    "watchify": "^3.11.1"
+    "underscore": "^1.9.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -89,6 +86,7 @@
     "browserify": "^16.5.0",
     "chokidar": "^3.2.2",
     "copyfiles": "^2.1.1",
+    "css-loader": "^3.2.0",
     "eslint": "^6.5.1",
     "express": "^4.17.1",
     "gulp": "^4.0.2",
@@ -124,6 +122,7 @@
     "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-uglify": "^6.0.3",
     "rollup-plugin-visualizer": "^2.6.0",
+    "style-loader": "^1.0.0",
     "typescript": "^3.6.4"
   }
 }

@@ -1,12 +1,23 @@
 // index.js
 
+// import 'index.scss';
+
+import {jquery} from "jquery";
+// window.jQuery = jquery;
+import "bootstrap";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 // require("@babel/register");
+
 // import React from 'react'
 // import ReactDOM from 'react-dom'
 
 // import './index.scss';
-import { app } from './app/app.js';
+import { core } from "./core/core.js";
+import { settings } from "./settings/settings.js";
 import { style } from './style/style.js';
+import { app } from './app/app.js';
+
 // var app = require('./app/app.js');
 // var React = require('react');
 // asdasdqw
@@ -27,7 +38,6 @@ const x = document.querySelector('#div');
 // export let play = ()=>{
 //   console.log(foo);
 //   // logUnderscoreVersion();// rollup.config.js
-
 // }
 
 app.f();
@@ -35,5 +45,17 @@ app.f();
 export let dev = {
   style: style,
   app: app,
+  core: core,
+  settings: settings,
   x: x
 }
+
+// window.v = dev;
+
+Object.defineProperty(window, "dev", {
+  value: dev,
+  writable: false,
+  enumerable: true
+});
+
+window.a = 'as';

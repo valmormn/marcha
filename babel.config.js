@@ -10,7 +10,7 @@ const presets = [
         // firefox: "40",
         // chrome: "47",
         // safari: "7.1",
-        "browsers": ["last 6 versions"]
+        "browsers": ["last 9 versions"]
       },
       corejs: 3,
       modules: false,
@@ -21,19 +21,9 @@ const presets = [
 ];
 
 const plugins = [
-  ["@babel/transform-arrow-functions"],
-  // ["@babel/plugin-transform-modules-umd"],
-  // ["@babel/plugin-transform-arrow-functions", { "spec": true }],
+  // ["@babel/transform-arrow-functions"],
+  ["@babel/plugin-transform-arrow-functions", { "spec": true }],
   // ["@babel/external-helpers"],
-  // ["@babel/transform-runtime"],
-  // ['@babel/plugin-transform-runtime', {
-    // corejs: false,
-    // corejs: 3,
-    // proposals: true,
-    // helpers: true,
-    // regenerator: false,
-    // useESModules: true,
-  // }, ]
 ];
 
 const overrides = [
