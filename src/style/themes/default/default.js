@@ -1,2 +1,2 @@
 // default
-export let default = { id: "default"}
+export let defaultTheme = { id: "default" };
