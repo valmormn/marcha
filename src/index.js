@@ -2,9 +2,9 @@
 
 // import 'index.scss';
 
-import {jquery} from "jquery";
+// import {jquery} from "jquery";
 // window.jQuery = jquery;
-import "bootstrap";
+// import "bootstrap";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 // require("@babel/register");
@@ -50,7 +50,9 @@ export let dev = {
   x: x
 }
 
-// window.v = dev;
+window.v = dev;
+
+window.v.f = app.f;
 
 Object.defineProperty(window, "dev", {
   value: dev,
