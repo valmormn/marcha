@@ -8,6 +8,12 @@
 // var browserify = require("browserify");
 // var babelify = require("babelify");
 
+const express = require('express');
+
+let server = require('./scripts/server.js');
+
+console.log(server.v);
+console.log(server.wtf);
 console.log('main');
 
 // browserify({
@@ -71,7 +77,7 @@ console.log('main');
 
 
 let a = () => {
-  console.log('ahhh eu to maluco');
+  console.log('ahhh eu to maluco2222');
   return
 }
 

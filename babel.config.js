@@ -10,7 +10,7 @@ const presets = [
         // firefox: "40",
         // chrome: "47",
         // safari: "7.1",
-        "browsers": ["last 9 versions"]
+        "browsers": ["last 12 versions"]
       },
       corejs: 3,
       modules: false,

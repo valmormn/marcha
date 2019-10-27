@@ -1,8 +1,9 @@
 {
+  "name": "name",
+  "homepage": "http://nodemon.io",
   "verbose": true,
-  "ignore": ["*.test.js", "fixtures/*"],
-  "execMap": {
-    "rb": "ruby",
-    "pde": "processing --sketch={{pwd}} --run"
-  }
+  "delay": "2",
+  "ignore": ["*.test.js", "dist/*"],
+  "watch": ["src"],
+  "execMap": {}
 }

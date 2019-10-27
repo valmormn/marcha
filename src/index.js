@@ -2,10 +2,10 @@
 
 // import 'index.scss';
 
-// import {jquery} from "jquery";
-// window.jQuery = jquery;
-// import "bootstrap";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import {jquery} from "jquery";
+window.jQuery = jquery;
+import "bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // require("@babel/register");
 
@@ -13,6 +13,7 @@
 // import ReactDOM from 'react-dom'
 
 // import './index.scss';
+
 import { core } from "./core/core.js";
 import { settings } from "./settings/settings.js";
 import { style } from './style/style.js';
@@ -20,7 +21,8 @@ import { app } from './app/app.js';
 
 // var app = require('./app/app.js');
 // var React = require('react');
-// asdasdqw
+console.log('fuck');
+
 
 // var _ = require('underscore');
 

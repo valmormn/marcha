@@ -3,14 +3,6 @@
   "version": "1.0.0",
   "description": "dev boilerplate",
   "main": "main.js",
-  "nodemonConfig": {
-    "ignore": [
-      "tests/*",
-      "scripts/*",
-      "dist/*"
-    ],
-    "delay": "2000"
-  },
   "scripts": {
     "babel": "npx babel src --out-dir dist",
     "build": "node ./scripts/build.js",
@@ -22,7 +14,7 @@
     "htm": "cp -Ri src/*.html src",
     "html": "copyfiles -u 1 src/**/*.html dist && copyfiles -u 1 src/*.html dist",
     "md": "echo md files to html",
-    "nodemon": "nodemon ./dist localhost 8181",
+    "nodemon": "nodemon src 8381",
     "css": "sass --style=compressed --embed-source-map --update src:dist",
     "sass": "sass --style=compressed --embed-source-map --update src:dist",
     "scss": "sass --style=compressed --embed-source-map --update src/index.scss dist/index.scss.css --color",
@@ -33,6 +25,7 @@
     "php-serve-dist": "php -S localhost:10617 ./dist/",
     "push": "git add . && git commit -am \"dev\" && git push",
     "rollup": "rollup -c",
+    "node-server": "node scripts/server.js",
     "serve": "http-server -o -p 7672 ./dist/",
     "serve-dist": "http-server -o -p 12557 ./dist/",
     "start": "node ./main.js",
