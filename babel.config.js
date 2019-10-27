@@ -22,7 +22,9 @@ const presets = [
 
 const plugins = [
   // ["@babel/transform-arrow-functions"],
-  ["@babel/plugin-transform-arrow-functions", { "spec": true }],
+  ["@babel/plugin-transform-arrow-functions", {
+    "spec": true
+  }],
   // ["@babel/external-helpers"],
 ];
 
@@ -34,7 +36,7 @@ const overrides = [
   //   ],   
   // }, 
   {
-    test: ["./tests"],     
+    test: ["./tests"],
     presets: [
       // config for tests
     ],

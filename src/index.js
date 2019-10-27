@@ -1,11 +1,12 @@
 // index.js
+// 'use strict'
 
 // import 'index.scss';
 
-import {jquery} from "jquery";
-window.jQuery = jquery;
-import "bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import {jquery} from "jquery";
+// window.jQuery = jquery;
+// import "bootstrap";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 // require("@babel/register");
 
@@ -21,7 +22,7 @@ import { app } from './app/app.js';
 
 // var app = require('./app/app.js');
 // var React = require('react');
-console.log('fuck');
+console.log('fuck222');
 
 
 // var _ = require('underscore');

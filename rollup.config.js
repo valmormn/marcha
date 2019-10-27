@@ -29,8 +29,6 @@ import dev from 'rollup-plugin-dev';
 // import browserSync from 'rollup-plugin-browsersync';
 // import livereload from 'rollup-plugin-livereload';
 
-// import fetch from 'node-fetch';
-
 let graph = require("rollup-plugin-graph");
 let graphOptions = {
   prune: true

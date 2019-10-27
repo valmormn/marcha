@@ -4,6 +4,9 @@
   "verbose": true,
   "delay": "2",
   "ignore": ["*.test.js", "dist/*"],
-  "watch": ["src"],
-  "execMap": {}
+  "watch": ["src/*"],
+  "execMap": {
+    "js": "rollup -c",
+    "scss": "npm run css"
+  }
 }
