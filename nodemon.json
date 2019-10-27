@@ -3,8 +3,8 @@
   "homepage": "http://nodemon.io",
   "verbose": true,
   "delay": "2",
-  "ignore": ["*.test.js", "dist/*"],
-  "watch": ["src/*"],
+  "ignore": ["*.test.js", "dist"],
+  "watch": ["src"],
   "execMap": {
     "js": "rollup -c",
     "scss": "npm run css"

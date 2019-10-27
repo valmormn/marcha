@@ -6,27 +6,36 @@ module.exports = {
     "es6": true,
     "jquery": true
   },
-  "extends": "eslint:recommended",
+  // "extends": "eslint:recommended",
+  "extends": [
+    "plugin:prettier/recommended",
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/standard",
+    // "eslint:recommended"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  // "parser": "babel-eslint",
-  "parser": "eslint",
+  "parser": "babel-eslint",
+  // "parser": "eslint",
   "parserOptions": {
+    "ecmaVersion": 6,
     "sourceType": "module",
     // "sourceType": "script",
     "allowImportExportEverywhere": true,
     "codeFrame": true,
-    "ecmaVersion": 6,
     "ecmaFeatures": {
       "jsx": true
     }
   },
   "plugins": [
-    "react"
+    "react",
+    "prettier"
   ],
   "rules": {
-    "strict": 0
+    "strict": 0,
+    "prettier/prettier": "error"
   }
 };
