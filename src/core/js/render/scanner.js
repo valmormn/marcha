@@ -1,7 +1,7 @@
 // scanner.js
 
 async function scanPage() {
-  // console.log( "Escaneando a página em busca de elementos com a classe 'render'" );
+  console.log( "Escaneando a página em busca de elementos com a classe 'render'" );
 
   let elements2Render = [];
   elements2Render = await document.getElementsByClassName("render");
@@ -18,21 +18,21 @@ async function scanPage() {
       setTimeout(()=>{element.dispatchEvent(event);}, 200);
     });
   } else {
-    // console.log('nada para carregar por enquanto');
+    console.log('nada para carregar por enquanto');
   }
 }
 
-document.addEventListener("pageScan", e => {
-  // setTimeout( scanPage(), 20 );
-  // console.log(e);
-  scanPage();
-});
+// document.addEventListener("pageScan", e => {
+//   // setTimeout( scanPage(), 20 );
+//   // console.log(e);
+//   scanPage();
+// });
 
 function afterLoad() {
-  // console.log("hey");
+  console.log("hey");
 
   document.addEventListener("DOMContentLoaded", function () {
-    // console.log('scannerx');
+    console.log('scannerx');
     // Primeira escaneada no documento 
     // pra carregar os primeiros componentes na pagina 
     scanPage();
@@ -41,7 +41,7 @@ function afterLoad() {
 
 export let scanner = {
   id: "scanner",
-  path: "./sys/js/render/scanner.js",
+  path: "core/js/render/scanner.js",
   afterLoad: afterLoad(),
   // scanPage: scanPage()
 };

@@ -3,6 +3,7 @@
 const presets = [
   [
     // "@babel/preset-react",
+    // "@babel/preset-env",
     "@babel/env",
     {
       targets: {
@@ -25,6 +26,7 @@ const plugins = [
   ["@babel/plugin-transform-arrow-functions", {
     "spec": true
   }],
+  ["@babel/transform-runtime"]  
   // ["@babel/external-helpers"],
 ];
 
