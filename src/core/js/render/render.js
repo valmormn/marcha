@@ -11,4 +11,4 @@ import {
 export let render = {
   id: "render",
   scanner: scanner
-}
+};

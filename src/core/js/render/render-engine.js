@@ -1,12 +1,15 @@
-
+import { log } from "util";
 
 document.addEventListener("render", (e) => {
   console.log('render');
-  console.log(e)
-
+  console.log(e);
+  console.log(e.target.dataset.path);
+  renderEngine(e, () => {
+    console.log('fuck yeah');
+  });
 });
 
-export let renderEngine = async (targetID, component, callback) => {
+export let renderEngine = async (e, callback) => {
 
   // let type = component.path.substr(component.path.length - 4);
   // console.log(type);
@@ -20,23 +23,27 @@ export let renderEngine = async (targetID, component, callback) => {
     cache: 'default'
   };
 
-  await fetch(component.path, myInit)
+  await fetch(e.target.dataset.path, myInit)
     .then(async function (response) {
       // console.log(response);
       return await response.text();
     })
     .then(async function (html) {
-      console.log("then load html");
+      // console.log("then load html");
+      // console.log(html);
+
       // Initialize the DOM parser
       var parser = new DOMParser();
 
       // Parse the text
       var doc = parser.parseFromString(html, "text/html");
-
-      // console.log(doc.body);
-      var target = document.getElementById(targetID);
+      console.log("doc.body");
+      console.log(doc.body);
+      var target = document.getElementById(e.srcElement.id);
       target.innerHTML = doc.body.innerHTML;
-      // console.log(target);
+      // target.innerHTML = "asd";
+      console.log('target');
+      console.log(target);
 
       // escaneia a pagina de novo
       // var pageScanEvent = new CustomEvent("pageScan", {
@@ -47,34 +54,34 @@ export let renderEngine = async (targetID, component, callback) => {
 
       // setTimeout(document.dispatchEvent(pageScanEvent), 100);
     })
-    .then(async ()=>{
+    .then(async () => {
       console.log('then load css');
     })
-    .then(async ()=>{
+    .then(async () => {
       console.log('then load js');
-      var loginComponentEvent = new CustomEvent("loginComponent", {
-        detail: "loginComponent",
-        bubbles: true,
-        cancelable: false
-      });
+      // var loginComponentEvent = new CustomEvent("loginComponent", {
+      //   detail: "loginComponent",
+      //   bubbles: true,
+      //   cancelable: false
+      // });
 
-      setTimeout(document.dispatchEvent(loginComponentEvent), 100);
+      // setTimeout(document.dispatchEvent(loginComponentEvent), 100);
     })
-    .then(async function(){
+    .then(async function () {
       console.log('pageScan');
       // escaneia a pagina de novo
-      var pageScanEvent = new CustomEvent("pageScan", {
-        detail: "page scan",
-        bubbles: true,
-        cancelable: false
-      });
+      // var pageScanEvent = new CustomEvent("pageScan", {
+      //   detail: "page scan",
+      //   bubbles: true,
+      //   cancelable: false
+      // });
 
-      setTimeout(document.dispatchEvent(pageScanEvent), 1000);
+      // setTimeout(document.dispatchEvent(pageScanEvent), 1000);
     })
     .then(async function () {
       // window.history.pushState({}, "login", "login");
     })
-    .then(async ()=>{
+    .then(async () => {
       console.log('then run callback');
       callback();
     })
