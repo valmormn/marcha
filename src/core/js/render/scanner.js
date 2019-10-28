@@ -9,7 +9,7 @@ async function scanPage() {
 
   if (elements2Render.length > 0) {
     elements2Render.forEach( element => {
-      // console.log(element);
+      console.log(element);
       var event = new CustomEvent("render", {
         detail: element, // .dataset.path
         bubbles: true,
