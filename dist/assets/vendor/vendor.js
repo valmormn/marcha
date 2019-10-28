@@ -1,4 +1,2 @@
 // vendor
-export var vendor = {
-  id: "vendor"
-};
+export let vendor = { id: "vendor"}
