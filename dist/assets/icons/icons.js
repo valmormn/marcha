@@ -1,4 +1,2 @@
 // icons
-export var icons = {
-  id: "icons"
-};
+export let icons = { id: "icons"}
