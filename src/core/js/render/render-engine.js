@@ -1,11 +1,14 @@
-import { log } from "util";
+import {
+  log
+} from "util";
 
 document.addEventListener("render", (e) => {
   console.log('render');
   console.log(e);
   console.log(e.target.dataset.path);
   renderEngine(e, () => {
-    console.log('fuck yeah');
+    e.srcElement.classList.remove("render");
+    console.log('fuck yeah!');
   });
 });
 
@@ -37,22 +40,13 @@ export let renderEngine = async (e, callback) => {
 
       // Parse the text
       var doc = parser.parseFromString(html, "text/html");
-      console.log("doc.body");
+      // console.log("doc.body");
       console.log(doc.body);
       var target = document.getElementById(e.srcElement.id);
       target.innerHTML = doc.body.innerHTML;
-      // target.innerHTML = "asd";
-      console.log('target');
+      // console.log('target');
       console.log(target);
 
-      // escaneia a pagina de novo
-      // var pageScanEvent = new CustomEvent("pageScan", {
-      //   detail: "page scan",
-      //   bubbles: true,
-      //   cancelable: false
-      // });
-
-      // setTimeout(document.dispatchEvent(pageScanEvent), 100);
     })
     .then(async () => {
       console.log('then load css');
@@ -70,17 +64,15 @@ export let renderEngine = async (e, callback) => {
     .then(async function () {
       console.log('pageScan');
       // escaneia a pagina de novo
-      // var pageScanEvent = new CustomEvent("pageScan", {
-      //   detail: "page scan",
-      //   bubbles: true,
-      //   cancelable: false
-      // });
+      var pageScanEvent = new CustomEvent("pageScan", {
+        detail: "page scan",
+        bubbles: true,
+        cancelable: false
+      });
 
-      // setTimeout(document.dispatchEvent(pageScanEvent), 1000);
+      setTimeout(document.dispatchEvent(pageScanEvent), 100);
     })
-    .then(async function () {
-      // window.history.pushState({}, "login", "login");
-    })
+    .then(async () => {})
     .then(async () => {
       console.log('then run callback');
       callback();

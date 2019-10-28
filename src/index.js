@@ -3,23 +3,32 @@
 
 // import 'index.scss';
 
-import jquery from "jquery";
-window.$ = window.jQuery = jquery;
+// import jquery from "jquery";
+// window.$ = window.jQuery = jquery;
 
 import "bootstrap";
 // import "node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-// require("@babel/register");
-
 // import React from 'react'
 // import ReactDOM from 'react-dom'
 
+// import * as Rx from "rxjs/Observable";
+// console.log(Rx);
+
 // import './index.scss';
 
-import { core } from "./core/core.js";
-import { settings } from "./settings/settings.js";
-import { style } from "./style/style.js";
-import { app } from "./app/app.js";
+import {
+  core
+} from "./core/core.js";
+import {
+  settings
+} from "./settings/settings.js";
+import {
+  style
+} from "./style/style.js";
+import {
+  app
+} from "./app/app.js";
 
 // var app = require('./app/app.js');
 // var React = require('react');

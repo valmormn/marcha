@@ -24,6 +24,9 @@ import scss from 'rollup-plugin-scss';
 // import html from 'rollup-plugin-fill-html';
 
 import dev from 'rollup-plugin-dev';
+import builtins from 'rollup-plugin-node-builtins';
+import globals from 'rollup-plugin-node-globals';
+
 // import serve from 'rollup-plugin-serve';
 // import phpServer from 'rollup-plugin-php-server';
 // import browserSync from 'rollup-plugin-browsersync';
@@ -39,43 +42,50 @@ export default {
   // treeshake: {},
   output: {
     // dir: '',
-    file: 'dist/index.rollup.js',
-    format: 'umd',
+    file: "dist/index.rollup.js",
+    format: "umd",
     // cjs: The CommonJS module that typically targetted for the Node.js environment.
     // amd: The AMD module which usually used in the browser.
     // umd: The UMD module which often use to target both the Node.js and the browser environments.
     // es: The ES module itself.
     // iife: Which will wrap our bundle within the IIFE (Immediately-Invoked Function Expression) for browser usage.
-    name: 'play'
+    name: "play"
   },
   plugins: [
+    globals(),
+    builtins(),
     progress(),
     // visualizer(),
     filesize(),
     resolve({
       // pass custom options to the resolve plugin
-      customResolveOptions: { 
+      customResolveOptions: {
         moduleDirectory: 'node_modules'
       }
     }),
     commonjs(), // prise en charge de require
-    resolve(
-      { browser: true, }
-    ),
+    resolve({
+      browser: true
+    }),
     babel({
       extensions: ['.js', '.jsx', '.ts'],
-      exclude: 'node_modules/**', // only transpile our source code
+      exclude: "node_modules/**", // only transpile our source code
       babelrc: false,
       // presets: [['babel-preset-env', { modules: false }], 'stage-3', 'react'],
-      presets: [['@babel/env', { loose: true, modules: false }]],
+      presets: [
+        ['@babel/env', {
+          loose: true,
+          modules: false
+        }]
+      ],
       // plugins: ['external-helpers'],
       // externalHelpers: true,
       runtimeHelpers: true,
     }),
-    uglify(),
-    terser(), // minification
+    // uglify(),
+    // terser(), // minification
     // sass(),
-    scss({output: 'dist'}), // ERROR - will output compiled styles to bundle.css,
+    // scss({output: 'dist'}), // ERROR - will output compiled styles to bundle.css,
     // serve('dist'),
     // phpServer({
     // port: 17365
@@ -93,7 +103,7 @@ export default {
     //   //   cert: fs.readFileSync('keys/agent2-cert.pem')
     //   // }
     // }),
-    graph(),
+    // graph(),
     // dev('dist/', { port: 3021 }),
     // html({
     //   dest: "dist/",
@@ -101,22 +111,22 @@ export default {
     //   onlinePath: '//www.valmor.net.br/dist/'
     // }),
     // html({
-      // include: '**/*.html',
-      // htmlMinifierOptions: {
-      //   collapseWhitespace: true,
-      //   collapseBooleanAttributes: true,
-      //   conservativeCollapse: true,
-      //   minifyJS: true
-      // },
-      // template: 'src/index.html',
-      // filename: 'index.html'
+    // include: '**/*.html',
+    // htmlMinifierOptions: {
+    //   collapseWhitespace: true,
+    //   collapseBooleanAttributes: true,
+    //   conservativeCollapse: true,
+    //   minifyJS: true
+    // },
+    // template: 'src/index.html',
+    // filename: 'index.html'
     // }),
     // copy({
-      // targets: [
-        // { src: 'src/**/*.html', dest: 'dist/' },
-        // { src: ['assets/fonts/arial.woff', 'assets/fonts/arial.woff2'], dest: 'dist/public/fonts' },
-        // { src: 'assets/images/**/*', dest: 'dist/public/images' }
-      // ]
+    // targets: [
+    // { src: 'src/**/*.html', dest: 'dist/' },
+    // { src: ['assets/fonts/arial.woff', 'assets/fonts/arial.woff2'], dest: 'dist/public/fonts' },
+    // { src: 'assets/images/**/*', dest: 'dist/public/images' }
+    // ]
     // })
   ],
   watch: {
@@ -126,15 +136,3 @@ export default {
     // include
   }
 };
-
-// module.exports = function (api) {
-//   api.cache(true);
-
-//   const presets = [ ... ];
-//   const plugins = [ ... ];
-
-//   return {
-//     presets,
-//     plugins
-//   };
-// }
