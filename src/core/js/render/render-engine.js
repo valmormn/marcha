@@ -1,14 +1,11 @@
-import {
-  log
-} from "util";
+// render-engine.js
 
 document.addEventListener("render", (e) => {
-  console.log('render');
-  console.log(e);
-  console.log(e.target.dataset.path);
+  // console.log('render');
+  // console.log(e);
+  // console.log(e.target.dataset.path);
   renderEngine(e, () => {
-    e.srcElement.classList.remove("render");
-    console.log('fuck yeah!');
+    // console.log('fuck yeah!');
   });
 });
 
@@ -29,9 +26,10 @@ export let renderEngine = async (e, callback) => {
   await fetch(e.target.dataset.path, myInit)
     .then(async function (response) {
       // console.log(response);
+      e.srcElement.classList.remove("render");
       return await response.text();
     })
-    .then(async function (html) {
+    .then(async html => {
       // console.log("then load html");
       // console.log(html);
 
@@ -41,18 +39,18 @@ export let renderEngine = async (e, callback) => {
       // Parse the text
       var doc = parser.parseFromString(html, "text/html");
       // console.log("doc.body");
-      console.log(doc.body);
+      // console.log(doc.body);
       var target = document.getElementById(e.srcElement.id);
       target.innerHTML = doc.body.innerHTML;
       // console.log('target');
-      console.log(target);
+      // console.log(target);
 
     })
     .then(async () => {
-      console.log('then load css');
+      // console.log('then load css');
     })
     .then(async () => {
-      console.log('then load js');
+      // console.log('then load js');
       // var loginComponentEvent = new CustomEvent("loginComponent", {
       //   detail: "loginComponent",
       //   bubbles: true,
@@ -70,11 +68,11 @@ export let renderEngine = async (e, callback) => {
         cancelable: false
       });
 
-      setTimeout(document.dispatchEvent(pageScanEvent), 100);
+      setTimeout(document.dispatchEvent(pageScanEvent), 1);
     })
     .then(async () => {})
     .then(async () => {
-      console.log('then run callback');
+      // console.log('then run callback');
       callback();
     })
     .catch(async function (err) {

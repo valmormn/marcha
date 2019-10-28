@@ -32,7 +32,7 @@ import {
 
 // var app = require('./app/app.js');
 // var React = require('react');
-console.log("fuck222");
+// console.log("fuck222");
 
 $(document).ready(function () {
   $("p").click(function () {
@@ -58,7 +58,7 @@ const x = document.querySelector("#div");
 //   // logUnderscoreVersion();// rollup.config.js
 // }
 
-app.f();
+// app.f();
 
 export let dev = {
   style: style,

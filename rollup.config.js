@@ -82,8 +82,8 @@ export default {
       // externalHelpers: true,
       runtimeHelpers: true,
     }),
-    // uglify(),
-    // terser(), // minification
+    uglify(),
+    terser(), // minification
     // sass(),
     // scss({output: 'dist'}), // ERROR - will output compiled styles to bundle.css,
     // serve('dist'),
