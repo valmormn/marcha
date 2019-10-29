@@ -1,1 +1,46 @@
-/*# sourceMappingURL=data:application/json,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%5D,%22names%22:%5B%5D,%22mappings%22:%22%22,%22file%22:%22app.css%22%7D */
+/* layout */
+/* header */
+#layout-header {
+  height: 48px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-flow: row;
+  text-align: left;
+  vertical-align: middle !important;
+  /* background-color: var(--bg); */
+}
+
+#logo {
+  font-size: 20px;
+}
+
+#halfmoon, #login, #bars {
+  cursor: pointer;
+}
+
+.dedao {
+  padding: 0px 12px;
+}
+
+/* header>div>* { */
+/* padding: 0 12px 0 12px;
+        display: flex;
+        flex-flow: column;
+        vertical-align: middle !important;
+        position: relative;
+        top: 20% !important; */
+/* transform: perspective(1px) translateY(-50%); */
+/* } */
+/* a#logo,
+  a:link#logo,
+  a:visited#logo {
+      color: white !important;
+      text-decoration: none !important;
+      text-decoration-line: none !important;
+      vertical-align: bottom !important;
+      width: 200px;
+  } */
+/* main */
+/* footer */
+
+/*# sourceMappingURL=data:application/json,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/app/layout/layout.scss%22,%22../../src/app/layout/header/header.scss%22,%22../../src/app/layout/main/main.scss%22,%22../../src/app/layout/footer/footer.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AACA;ACDA;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;AACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;AACA;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AClCA;ACAA%22,%22file%22:%22app.css%22%7D */

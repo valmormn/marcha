@@ -1,42 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>avcamisas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <title>avcamisas</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/fontawesome/all.min.css" />
 
-  <!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="./index.css">
-  <!-- <link rel="stylesheet" href="./index.scss"> -->
-  <!-- <link rel="stylesheet" href="./index.sass.css"> -->
-  <!-- <link rel="stylesheet" href="./index.scss.css"> -->
+    <!--  -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- <link rel="stylesheet" href="./index.scss"> -->
+    <!-- <link rel="stylesheet" href="./index.sass.css"> -->
+    <!-- <link rel="stylesheet" href="./index.scss.css"> -->
+  </head>
 
-</head>
+  <body>
+    <div id="app" class="render" data-path="./app/app.html"></div>
 
-<body>
-  <noscript>Your browser does not support JavaScript!</noscript>
-  <div id="app" class="render" data-path="./app/app.html"></div>
-  
+    <js id="js">
+      <noscript>Your browser does not support JavaScript!</noscript>
 
-  <!-- Charge React -->
-  <!-- Remarque : pour le déploiement, remplacez "development.js"
+      <script>
+        if (typeof module === "object") {
+          window.module = module;
+          module = undefined;
+        }
+      </script>
+
+      <!-- Service Worker -->
+      <!-- <script>
+        // CODELAB: Register service worker.
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", () => {
+            // navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register("/sw.js").then(reg => {
+              console.log("Service worker registered.", reg);
+            });
+          });
+        }
+      </script> -->
+
+      <script defer>
+        window.addEventListener("DOMContentLoaded", function() {
+          // var worker = new Worker('task.js');
+
+          navigator.serviceWorker.register("./sw.js").then(
+            function(registration) {
+              // Registration was successful
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            },
+            function(err) {
+              // registration failed :(
+              console.log("ServiceWorker registration failed: ", err);
+            }
+          );
+        });
+      </script>
+
+      <!-- Charge React -->
+      <!-- Remarque : pour le déploiement, remplacez "development.js"
         par "production.min.js" -->
-  <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script> -->
-  <!-- <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
+      <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script> -->
+      <!-- <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
 
-  <!--  -->
-  <!-- <script type="application/javascript" src="./index.js" type="module" charset="utf-8" defer></script> -->
-  <!-- <script type="application/javascript" src="./index.js" charset="utf-8" defer></script> -->
-  <!-- <script src="./index.babel.build.js"></script> -->
-  <script type="application/javascript" src="./index.rollup.js" defer></script>
-  <!-- <script src="./index.rollup.build.js"></script> -->
-  <!-- <script src="./index.gulp.build.js"></script> -->
-  <!-- <script src="./index.node.build.js"></script> -->
+      <!--  -->
+      <!-- <script type="application/javascript" src="./index.js" type="module" charset="utf-8" defer></script> -->
+      <!-- <script type="application/javascript" src="./index.js" charset="utf-8" defer></script> -->
+      <!-- <script src="./index.babel.build.js"></script> -->
+      <script
+        type="application/javascript"
+        src="./index.rollup.js"
+        defer
+      ></script>
+      <!-- <script src="./index.rollup.build.js"></script> -->
+      <!-- <script src="./index.gulp.build.js"></script> -->
+      <!-- <script src="./index.node.build.js"></script> -->
 
-</body>
-
+      <script>
+        if (window.module) module = window.module;
+      </script>
+      <!-- https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined -->
+    </js>
+  </body>
 </html>

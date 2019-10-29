@@ -1,0 +1,23 @@
+/* Dark */
+
+:root {
+  --corFundo: whitesmoke !important;
+  --corFundoDarker: #c5c5c5 !important;
+  --corTexto: #252525 !important;
+  --corTextoClaro: #eee;
+  --linkDim: #4D61FC;
+  --linkLight: #344bfc;
+
+  /* color: var(--corTextoClaro) !important;
+  background-color: var(--corFundoDark) !important; */
+}
+
+html {
+  color: var(--corTexto) !important;
+  background-color: var(--corFundoDarker) !important;
+}
+
+body {
+  color: var(--corTexto) !important;
+  background-color: var(--corFundo) !important;
+}

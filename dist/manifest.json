@@ -1,0 +1,32 @@
+{
+  "lang": "pt-br",
+  "dir": "ltr",
+  "name": "valmor.net.br",
+  "description": "The ultimate futuristic app from the future!",
+  "short_name": "valmor.net.br",
+  "icons": [{
+    "src": "./assets/icons/rocket/android-icon-192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "scope": "./",
+  "start_url": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "aliceblue",
+  "background_color": "red",
+  "serviceworker": {
+    "src": "sw.js",
+    "scope": "/",
+    "update_via_cache": "none"
+  },
+  "screenshots": [{
+    "src": "",
+    "sizes": "640x480",
+    "type": "image/jpeg"
+  },{
+    "src": "",
+    "sizes": "1280x920",
+    "type": "image/jpeg"
+  }]
+}

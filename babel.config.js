@@ -26,6 +26,7 @@ const plugins = [
   ["@babel/plugin-transform-arrow-functions", {
     "spec": true
   }],
+  ["transform-imports"],
   ["@babel/transform-runtime"]  
   // ["@babel/external-helpers"],
 ];

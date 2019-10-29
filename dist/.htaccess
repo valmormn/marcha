@@ -1,0 +1,35 @@
+# https://github.com/phanan/htaccess
+
+# AddCharset UTF-8 .html
+
+
+# <Directory />
+    # AddType text/example .exm
+    # DirectoryIndex index.php
+# </Directory>
+#  
+
+DirectoryIndex index.php
+
+# RewriteEngine on
+# RewriteCond %{HTTPS} !on
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# <IfModule mod_headers.c>
+#     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+# </IfModule>
+
+# RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^valmor\.net.br [NC]
+#RewriteRule ^(.*)$ http://www.valmor.net.br/ [L,R=301,NC]
+
+# Deny Access to Hidden Files and Directories
+# RewriteCond %{SCRIPT_FILENAME} -d [OR]
+# RewriteCond %{SCRIPT_FILENAME} -f
+# RewriteRule "(^|/)\." - [F]
+#RedirectMatch 404 /\..*$
+
+
+# Custom Error Pages
+# ErrorDocument 500 "Houston, we have a problem."
+# ErrorDocument 401 http://error.example.com/mordor.html
+# ErrorDocument 404 /server/error/404/404.html

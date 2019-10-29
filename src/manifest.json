@@ -5,7 +5,7 @@
   "description": "The ultimate futuristic app from the future!",
   "short_name": "valmor.net.br",
   "icons": [{
-    "src": "./assets/icons/rocket/android-icon-192x192.png",
+    "src": "./assets/icons/rocket.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
@@ -24,7 +24,7 @@
     "src": "",
     "sizes": "640x480",
     "type": "image/jpeg"
-  },{
+  }, {
     "src": "",
     "sizes": "1280x920",
     "type": "image/jpeg"

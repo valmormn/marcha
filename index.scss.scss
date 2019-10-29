@@ -1,0 +1,18 @@
+// index.scss
+
+// @import "custom";
+// @import "~bootstrap/scss/bootstrap";
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./style/style.scss";
+@import "./app/app.scss";
+
+$font-stack: Helvetica, sans-serif;
+// $primary-color: #333;
+
+body {
+  // font: 100% $font-stack;
+  // font-size: 36px;
+  //   color: $primary-color;
+  // color: red;
+  // background-color: #333;
+}
