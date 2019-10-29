@@ -3,12 +3,12 @@
 
 // import 'index.scss';
 
-import jquery from "jquery";
-window.$ = window.jQuery = jquery;
-import { popper } from "popper.js";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+// import "@babel/polyfill";
 
 // import { Bootstrap } from "bootstrap";
-import "bootstrap";
+// import "bootstrap";
 // import "node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 // import React from 'react'

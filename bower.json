@@ -1,0 +1,20 @@
+{
+  "name": "dev",
+  "description": "dev boilerplate",
+  "main": "main.js",
+  "authors": [
+    "Valmor <valmormn@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/valmormn/dev",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
