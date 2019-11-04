@@ -1,2 +1,5 @@
+// index.scss
 
-@import './app/app.scss';
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./app/app.scss";
+@import "./style/style.scss";

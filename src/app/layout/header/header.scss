@@ -1,21 +1,30 @@
 /* header */
 
-#layout-header {
+#header {
   height: 48px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
   display: flex;
   flex-flow: row;
-  text-align: left;
+  // text-align: left;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
   vertical-align: middle !important;
   /* background-color: var(--bg); */
+  // * {
+    
+  // }
 }
 
 #logo {
   font-size: 20px;
 }
 
-#halfmoon, #login, #bars {
+#halfmoon,
+#login,
+#bars {
   cursor: pointer;
+  padding: 0px 12px 0px 12px;
 }
 
 .dedao {

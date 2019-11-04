@@ -1,10 +1,12 @@
 /* header */
-#layout-header {
+#header {
   height: 48px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
   display: flex;
   flex-flow: row;
-  text-align: left;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
   vertical-align: middle !important;
   /* background-color: var(--bg); */
 }
@@ -13,8 +15,11 @@
   font-size: 20px;
 }
 
-#halfmoon, #login, #bars {
+#halfmoon,
+#login,
+#bars {
   cursor: pointer;
+  padding: 0px 12px 0px 12px;
 }
 
 .dedao {
@@ -40,4 +45,4 @@
       width: 200px;
   } */
 
-/*# sourceMappingURL=data:application/json,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../../../src/app/layout/header/header.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;AACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;AACA;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA%22,%22file%22:%22header.css%22%7D */
+/*# sourceMappingURL=data:application/json,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../../../src/app/layout/header/header.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAEA;EACE;EACA;EACA;EACA;EAEA;EACA;EACA;EACA;AACA;;;AAMF;EACE;;;AAGF;AAAA;AAAA;EAGE;EACA;;;AAGF;EACE;;;AAGF;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;AACA;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA%22,%22file%22:%22header.css%22%7D */
