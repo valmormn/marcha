@@ -1,0 +1,19 @@
+/*!
+ * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url("../webfonts/fa-solid-900.eot");
+  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+.fa,
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+/*# sourceMappingURL=data:application/json,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../../../../src/assets/vendor/fontawesome-free-5.11.2-web/scss/solid.scss%22,%22../../../../../src/assets/vendor/fontawesome-free-5.11.2-web/scss/_variables.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAAA;AAAA;AAAA;AAMA;EACE;EACA;EACA;EACA,cCLqB;EDMrB;EACA;;AAOF;AAAA;EAEE;EACA%22,%22file%22:%22solid.css%22%7D */
