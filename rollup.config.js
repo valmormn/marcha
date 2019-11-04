@@ -1,7 +1,7 @@
 // rollup.config.js
 
 // var fs = require("fs");
-// const rollup = require("rollup");
+const rollup = require("rollup");
 
 import progress from "rollup-plugin-progress";
 import filesize from "rollup-plugin-filesize";
