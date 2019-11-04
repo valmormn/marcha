@@ -1,20 +1,3 @@
-/* style */
-/* themes */
-/* default */
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-nav li {
-  display: inline-block;
-}
-nav a {
-  display: block;
-  padding: 6px 12px;
-  text-decoration: none;
-}
-
 /* layout */
 /* header */
 #layout-header {
@@ -60,4 +43,4 @@ nav a {
 /* main */
 /* footer */
 
-/*# sourceMappingURL=data:application/json,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../src/style/style.scss%22,%22../src/style/themes/themes.scss%22,%22../src/style/themes/default/default.scss%22,%22../src/app/layout/layout.scss%22,%22../src/app/layout/header/header.scss%22,%22../src/app/layout/main/main.scss%22,%22../src/app/layout/footer/footer.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;ACAA;ACAA;AFKE;EACE;EACA;EACA;;AAGF;EACE;;AAGF;EACE;EACA;EACA;;;AGjBJ;ACDA;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;AACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;AACA;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AClCA;ACAA%22,%22file%22:%22index.css%22%7D */
+/*# sourceMappingURL=data:application/json,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../src/app/layout/layout.scss%22,%22../src/app/layout/header/header.scss%22,%22../src/app/layout/main/main.scss%22,%22../src/app/layout/footer/footer.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AACA;ACDA;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;AACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;AACA;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AClCA;ACAA%22,%22file%22:%22index.css%22%7D */

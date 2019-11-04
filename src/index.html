@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="assets/vendor/fontawesome/all.min.css" />
 
     <!--  -->
-    <link rel="stylesheet" href="./index.css" />
-    <!-- <link rel="stylesheet" href="./index.scss"> -->
+    <!-- <link rel="stylesheet" href="./index.css" /> -->
+    <link rel="stylesheet" href="./index.scss" />
     <!-- <link rel="stylesheet" href="./index.sass.css"> -->
     <!-- <link rel="stylesheet" href="./index.scss.css"> -->
   </head>
@@ -29,8 +29,8 @@
 
       <script>
         if (typeof module === "object") {
-          window.module = module;
-          module = undefined;
+          window.module = module
+          module = undefined
         }
       </script>
 
@@ -57,14 +57,14 @@
               console.log(
                 "ServiceWorker registration successful with scope: ",
                 registration.scope
-              );
+              )
             },
             function(err) {
               // registration failed :(
-              console.log("ServiceWorker registration failed: ", err);
+              console.log("ServiceWorker registration failed: ", err)
             }
-          );
-        });
+          )
+        })
       </script>
 
       <!-- Charge React -->
@@ -74,20 +74,16 @@
       <!-- <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
 
       <!--  -->
-      <!-- <script type="application/javascript" src="./index.js" type="module" charset="utf-8" defer></script> -->
+      <script type="application/javascript" src="./index.js" type="module" charset="utf-8" defer></script>
       <!-- <script type="application/javascript" src="./index.js" charset="utf-8" defer></script> -->
       <!-- <script src="./index.babel.build.js"></script> -->
-      <script
-        type="application/javascript"
-        src="./index.rollup.js"
-        defer
-      ></script>
+      <!-- <script type="application/javascript" src="./index.rollup.js" defer></script> -->
       <!-- <script src="./index.rollup.build.js"></script> -->
       <!-- <script src="./index.gulp.build.js"></script> -->
       <!-- <script src="./index.node.build.js"></script> -->
 
       <script>
-        if (window.module) module = window.module;
+        if (window.module) module = window.module
       </script>
       <!-- https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined -->
     </js>

@@ -28,11 +28,9 @@ import { app } from "./app/app.js";
 // var React = require('react');
 // console.log("fuck222");
 
-$(document).ready(() => {
-  $("h1").click(function() {
-    $(this).hide();
-  });
-});
+var sass = require("sass"); // or require('node-sass');
+
+var result = sass.renderSync({file: "./index.scss"});
 
 // var _ = require('underscore');
 
