@@ -1,5 +1,5 @@
 // index.js
-"use strict";
+// "use strict";
 
 // import 'index.scss';
 
@@ -28,9 +28,9 @@ import { app } from "./app/app.js";
 // var React = require('react');
 // console.log("fuck222");
 
-var sass = require("sass"); // or require('node-sass');
+// var sass = require("sass"); // or require('node-sass');
 
-var result = sass.renderSync({file: "./index.scss"});
+// var result = sass.renderSync({file: "./index.scss"});
 
 // var _ = require('underscore');
 
