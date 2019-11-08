@@ -1,2 +1,3 @@
 // main
-export let main = { id: "main"}
+
+export let main = { id: "main" }

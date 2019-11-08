@@ -9,23 +9,19 @@
   align-content: center;
   justify-content: space-between;
   vertical-align: middle !important;
-  /* background-color: var(--bg); */
-}
+  /* background-color: var(--bg); */ }
 
 #logo {
-  font-size: 20px;
-}
+  font-size: 22px; }
 
 #halfmoon,
 #login,
 #bars {
   cursor: pointer;
-  padding: 0px 12px 0px 12px;
-}
+  padding: 0px 12px 0px 12px; }
 
 .dedao {
-  padding: 0px 12px;
-}
+  padding: 0px 12px; }
 
 /* header>div>* { */
 /* padding: 0 12px 0 12px;
@@ -46,6 +42,9 @@
       width: 200px;
   } */
 /* main */
+#main {
+  color: red; }
+
 /* footer */
 
-/*# sourceMappingURL=data:application/json,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../../src/app/layout/layout.scss%22,%22../../../src/app/layout/header/header.scss%22,%22../../../src/app/layout/main/main.scss%22,%22../../../src/app/layout/footer/footer.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AACA;ACDA;AAEA;EACE;EACA;EACA;EACA;EAEA;EACA;EACA;EACA;AACA;;;AAMF;EACE;;;AAGF;AAAA;AAAA;EAGE;EACA;;;AAGF;EACE;;;AAGF;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;AACA;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AC3CA;ACAA%22,%22file%22:%22layout.css%22%7D */
+/*# sourceMappingURL=layout.css.map */

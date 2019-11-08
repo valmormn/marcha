@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAU;AAEV,KAAM;EACJ,KAAK,EAAE,GAAG",
+"sources": ["../../../../src/app/layout/main/main.scss"],
+"names": [],
+"file": "main.css"
+}

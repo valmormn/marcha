@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,YAAY;ACDZ,YAAY;AAEZ,OAAQ;EACN,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,0DAA0D;EACtE,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,GAAG;EAEd,WAAW,EAAE,MAAM;EACnB,aAAa,EAAE,MAAM;EACrB,eAAe,EAAE,aAAa;EAC9B,cAAc,EAAE,iBAAiB;EACjC,kCAAkC;;AAMpC,KAAM;EACJ,SAAS,EAAE,IAAI;;AAGjB;;KAEM;EACJ,MAAM,EAAE,OAAO;EACf,OAAO,EAAE,iBAAiB;;AAG5B,MAAO;EACL,OAAO,EAAE,QAAQ;;AAGnB,oBAAoB;AACpB;;;;;+BAK+B;AAC/B,mDAAmD;AACnD,OAAO;AAEP;;;;;;;;MAQM;ACnDN,UAAU;AAEV,KAAM;EACJ,KAAK,EAAE,GAAG;;ACHZ,YAAY",
+"sources": ["../../src/app/layout/layout.scss","../../src/app/layout/header/header.scss","../../src/app/layout/main/main.scss","../../src/app/layout/footer/footer.scss"],
+"names": [],
+"file": "app.css"
+}

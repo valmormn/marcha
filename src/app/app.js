@@ -1,10 +1,10 @@
 // app.js
 
-// 'use strict';
+import { layout } from "./layout/layout.js"
 
 // const e = React.createElement;
 
-console.log('app.js');
+// console.log("app.js")
 
 // class LikeButton extends React.Component {
 //   constructor(props) {
@@ -29,9 +29,10 @@ console.log('app.js');
 // ReactDOM.render(e(LikeButton), domContainer);
 
 export let app = {
-  f: ()=>{
-    console.log('inside app.js!');
-  }
+  id: "app",
+  f: () => {
+    console.log("inside app.js!")
+  },
 }
 
-export default 'hello world!';
+export default "hello world!"

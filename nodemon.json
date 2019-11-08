@@ -7,6 +7,8 @@
   "watch": ["src"],
   "execMap": {
     "js": "rollup -c",
+    "jsx": "",
+    "ts": "tsc src/**/*",
     "scss": "npm run css"
   }
 }

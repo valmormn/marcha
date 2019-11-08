@@ -3,6 +3,9 @@
 /* default */
 html {
   line-height: 1.15;
+  background-color: lightblue;
+  color: darkblue;
+  font-size: 18px;
 }
 
 nav ul {
@@ -19,4 +22,4 @@ nav a {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=data:application/json,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/style/style.scss%22,%22../../src/style/themes/themes.scss%22,%22../../src/style/themes/default/default.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;ACAA;ACAA;AAaA;EACE;;;AFTA;EACE;EACA;EACA;;AAGF;EACE;;AAGF;EACE;EACA;EACA%22,%22file%22:%22style.css%22%7D */
+/*# sourceMappingURL=style.css.map */

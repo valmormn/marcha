@@ -1,37 +1,37 @@
 // rollup.config.js
 
 // var fs = require("fs");
-const rollup = require("rollup");
+const rollup = require("rollup")
 
-import progress from "rollup-plugin-progress";
-import filesize from "rollup-plugin-filesize";
+import progress from "rollup-plugin-progress"
+import filesize from "rollup-plugin-filesize"
 // import visualizer from "rollup-plugin-visualizer";
 // import helpers from "babel-plugin-external-helpers";
 
-import commonjs from "rollup-plugin-commonjs";
-import resolve from "rollup-plugin-node-resolve";
-import babel from "rollup-plugin-babel";
-import { uglify } from "rollup-plugin-uglify";
-import { terser } from "rollup-plugin-terser";
+import commonjs from "rollup-plugin-commonjs"
+import resolve from "rollup-plugin-node-resolve"
+import babel from "rollup-plugin-babel"
+import { uglify } from "rollup-plugin-uglify"
+import { terser } from "rollup-plugin-terser"
 // import copy from "rollup-plugin-copy";
 // import sass from "rollup-plugin-sass";
-import scss from "rollup-plugin-scss";
+import scss from "rollup-plugin-scss"
 
 // import html from "rollup-plugin-fill-html";
 
-import dev from "rollup-plugin-dev";
-import builtins from "rollup-plugin-node-builtins";
-import globals from "rollup-plugin-node-globals";
+import dev from "rollup-plugin-dev"
+import builtins from "rollup-plugin-node-builtins"
+import globals from "rollup-plugin-node-globals"
 
 // import serve from "rollup-plugin-serve";
 // import phpServer from "rollup-plugin-php-server";
 // import browserSync from "rollup-plugin-browsersync";
 // import livereload from "rollup-plugin-livereload";
 
-let graph = require("rollup-plugin-graph");
+let graph = require("rollup-plugin-graph")
 let graphOptions = {
-  prune: true
-};
+  prune: true,
+}
 
 export default {
   input: "src/index.js",
@@ -45,7 +45,7 @@ export default {
     // umd: The UMD module which often use to target both the Node.js and the browser environments.
     // es: The ES module itself.
     // iife: Which will wrap our bundle within the IIFE (Immediately-Invoked Function Expression) for browser usage.
-    name: "play"
+    name: "play",
   },
   plugins: [
     globals(),
@@ -56,12 +56,12 @@ export default {
     resolve({
       // pass custom options to the resolve plugin
       customResolveOptions: {
-        moduleDirectory: "node_modules"
-      }
+        moduleDirectory: "node_modules",
+      },
     }),
     commonjs(), // prise en charge de require
     resolve({
-      browser: true
+      browser: true,
     }),
     babel({
       extensions: [".js", ".jsx", ".ts"],
@@ -73,14 +73,14 @@ export default {
           "@babel/env",
           {
             loose: true,
-            modules: false
-          }
-        ]
+            modules: false,
+          },
+        ],
       ],
       // plugins: ["external-helpers"],
       // externalHelpers: true,
-      runtimeHelpers: true
-    })
+      runtimeHelpers: true,
+    }),
     // uglify(),
     // terser(), // minification
     // sass(),
@@ -133,5 +133,5 @@ export default {
     // clearScreen,
     // exclude,
     // include
-  }
-};
+  },
+}
