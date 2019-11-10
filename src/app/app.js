@@ -28,6 +28,10 @@ import { layout } from "./layout/layout.js"
 // const domContainer = document.querySelector('#like_button_container');
 // ReactDOM.render(e(LikeButton), domContainer);
 
+document.addEventListener("app", () => {
+  console.log("ah moleque!")
+})
+
 export let app = {
   id: "app",
   f: () => {

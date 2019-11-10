@@ -11,7 +11,7 @@ document.addEventListener("render", e => {
 
 export let renderEngine = async (e, callback) => {
   // let type = component.path.substr(component.path.length - 4);
-  // console.log(type);
+  // console.log(e)
 
   var myHeaders = new Headers()
 
@@ -49,12 +49,12 @@ export let renderEngine = async (e, callback) => {
     })
     .then(async () => {
       // console.log('then load js');
-      // var loginComponentEvent = new CustomEvent("loginComponent", {
-      //   detail: "loginComponent",
-      //   bubbles: true,
-      //   cancelable: false
-      // });
-      // setTimeout(document.dispatchEvent(loginComponentEvent), 100);
+      var loadComponentJS = new CustomEvent("loadComponentJS", {
+        detail: e,
+        bubbles: true,
+        cancelable: false,
+      })
+      setTimeout(e.srcElement.dispatchEvent(loadComponentJS), 100)
     })
     .then(async function() {
       // console.log("pageScan")
@@ -65,9 +65,11 @@ export let renderEngine = async (e, callback) => {
         cancelable: false,
       })
 
-      setTimeout(document.dispatchEvent(pageScanEvent), 1)
+      setTimeout(document.dispatchEvent(pageScanEvent), 100)
     })
-    .then(async () => {})
+    .then(async () => {
+      // s
+    })
     .then(async () => {
       // console.log('then run callback');
       callback()

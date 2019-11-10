@@ -14,6 +14,29 @@
 
   var newArrowCheck = _newArrowCheck;
 
+  var _this = undefined;
+
+  // events.js
+  // loadComponentJS
+  document.addEventListener("loadComponentJS", function (e) {
+    newArrowCheck(this, _this);
+
+    console.log(e);
+    var loadComponentJS = new CustomEvent(e.srcElement.id, {
+      detail: "pageScan",
+      bubbles: true,
+      cancelable: false
+    });
+    setTimeout(document.dispatchEvent(loadComponentJS), 100); // var login = document.getElementById("toggleAuth")
+    // console.log(login)
+    // login.addEventListener("click", () => {
+    //   console.log("click no login")
+    // })
+  }.bind(undefined));
+  var events = {
+    id: "events"
+  };
+
   var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
   function unwrapExports (x) {
@@ -792,11 +815,11 @@
 
   var asyncToGenerator = _asyncToGenerator;
 
-  var _this = undefined;
+  var _this$1 = undefined;
 
   // scanner.js
   document.addEventListener("pageScan", function (e) {
-    newArrowCheck(this, _this);
+    newArrowCheck(this, _this$1);
 
     // setTimeout( scanPage(), 20 );
     // console.log(e);
@@ -865,13 +888,13 @@
     scanPage: scanPage()
   };
 
-  var _this$1 = undefined;
+  var _this$2 = undefined;
 
   // render - engine.js
   document.addEventListener("render", function (e) {
     var _this2 = this;
 
-    newArrowCheck(this, _this$1);
+    newArrowCheck(this, _this$2);
 
     // console.log("render")
     // console.log(e)
@@ -894,10 +917,10 @@
         while (1) {
           switch (_context9.prev = _context9.next) {
             case 0:
-              newArrowCheck(this, _this$1);
+              newArrowCheck(this, _this$2);
 
               // let type = component.path.substr(component.path.length - 4);
-              // console.log(type);
+              // console.log(e)
               myHeaders = new Headers();
               myInit = {
                 method: "GET",
@@ -993,13 +1016,22 @@
               asyncToGenerator(
               /*#__PURE__*/
               regenerator.mark(function _callee4() {
+                var loadComponentJS;
                 return regenerator.wrap(function _callee4$(_context4) {
                   while (1) {
                     switch (_context4.prev = _context4.next) {
                       case 0:
                         newArrowCheck(this, _this3);
 
-                      case 1:
+                        // console.log('then load js');
+                        loadComponentJS = new CustomEvent("loadComponentJS", {
+                          detail: e,
+                          bubbles: true,
+                          cancelable: false
+                        });
+                        setTimeout(e.srcElement.dispatchEvent(loadComponentJS), 100);
+
+                      case 3:
                       case "end":
                         return _context4.stop();
                     }
@@ -1022,7 +1054,7 @@
                           bubbles: true,
                           cancelable: false
                         });
-                        setTimeout(document.dispatchEvent(pageScanEvent), 1);
+                        setTimeout(document.dispatchEvent(pageScanEvent), 100);
 
                       case 2:
                       case "end":
@@ -1119,7 +1151,7 @@
         while (1) {
           switch (_context18.prev = _context18.next) {
             case 0:
-              newArrowCheck(this, _this$1);
+              newArrowCheck(this, _this$2);
 
               // let type = component.path.substr(component.path.length - 4);
               // console.log(e)
@@ -1332,9 +1364,9 @@
     return renderEngineX;
   }().bind(undefined);
 
-  var _this$2 = undefined;
+  var _this$3 = undefined;
   document.addEventListener("DOMContentLoaded", function () {
-    newArrowCheck(this, _this$2);
+    newArrowCheck(this, _this$3);
 
     console.log("scanner scanPage"); // render.scanner.scanPage()
   }.bind(undefined), false);
@@ -1345,13 +1377,13 @@
     renderEngineX: renderEngineX
   };
 
-  var _this$3 = undefined;
+  var _this$4 = undefined;
 
   // mouse.js
   var clickController = function clickController() {
     var _this2 = this;
 
-    newArrowCheck(this, _this$3);
+    newArrowCheck(this, _this$4);
 
     document.addEventListener("click", function (e) {
       newArrowCheck(this, _this2);
@@ -1363,7 +1395,7 @@
   var afterLoad = function afterLoad() {
     var _this3 = this;
 
-    newArrowCheck(this, _this$3);
+    newArrowCheck(this, _this$4);
 
     document.addEventListener("DOMContentLoaded", function () {// console.log("mouse2")
       // clickController()
@@ -1390,14 +1422,16 @@
   // core/js/js.js
   var js = {
     render: render,
-    sensi: sensi
+    sensi: sensi,
+    events: events // 
+
   };
 
-  var _this$4 = undefined;
+  var _this$5 = undefined;
 
   document.addEventListener("DOMContentLoaded", function () {// console.log("corejs")
 
-    newArrowCheck(this, _this$4);
+    newArrowCheck(this, _this$5);
   }.bind(undefined));
   var core = {
     id: "core",
@@ -17745,6 +17779,12 @@
   console.log(Rx); // import React from "react"
   // import ReactDOM from "react-dom"
   //
+  // import * as Tone from "ton/e"
+  // let Tone = import("tone")
+  //create a synth and connect it to the master output (your speakers)
+  // var synth = new Tone.Synth().toMaster()
+  //play a middle 'C' for the duration of an 8th note
+  // synth.triggerAttackRelease("C4", "8n")
 
   var imports = {
     id: "imports"
@@ -17889,18 +17929,32 @@
   }.bind(undefined); // afterLoad()
 
 
+  document.addEventListener("header", function () {
+    var _this7 = this;
+
+    newArrowCheck(this, _this2);
+
+    console.log(header);
+    var login = document.getElementById("toggleAuth");
+    console.log(login);
+    login.addEventListener("click", function () {
+      newArrowCheck(this, _this7);
+
+      console.log("click no login");
+    }.bind(this));
+  }.bind(undefined));
   var header = {
     id: "header",
-    path: "/app/page/layout/header/header.js",
-    afterLoad: afterLoad$1()
+    path: "/app/page/layout/header/header.js" // afterLoad: afterLoad(),
+
   };
 
-  var _this$5 = undefined;
+  var _this$6 = undefined;
 
   // footer.js
   // import { rendererX } from "../../../sys/js/render/renderer";
   var afterLoad$2 = function afterLoad() {
-    newArrowCheck(this, _this$5);
+    newArrowCheck(this, _this$6);
 
     document.addEventListener("DOMContentLoaded", function () {
       var _this2 = this;
@@ -17974,13 +18028,24 @@
     });
   }.bind(undefined);
 
+  document.addEventListener("footer", function () {
+    var _this7 = this;
+
+    newArrowCheck(this, _this$6);
+
+    document.querySelector("#go2About").addEventListener("click", function () {
+      newArrowCheck(this, _this7);
+
+      console.log("#go2About");
+    }.bind(this));
+  }.bind(undefined));
   var footer = {
     id: "footer",
     path: "/app/layout/footer/footer.js",
     afterLoad: afterLoad$2()
   };
 
-  var _this$6 = undefined;
+  var _this$7 = undefined;
   // console.log("app.js")
   // class LikeButton extends React.Component {
   //   constructor(props) {
@@ -18001,16 +18066,21 @@
   // const domContainer = document.querySelector('#like_button_container');
   // ReactDOM.render(e(LikeButton), domContainer);
 
+  document.addEventListener("app", function () {
+    newArrowCheck(this, _this$7);
+
+    console.log("ah moleque!");
+  }.bind(undefined));
   var app = {
     id: "app",
     f: function f() {
-      newArrowCheck(this, _this$6);
+      newArrowCheck(this, _this$7);
 
       console.log("inside app.js!");
     }.bind(undefined)
   };
 
-  var _this$7 = undefined;
+  var _this$8 = undefined;
   window.v = {
     name: "web-graphics",
     author: "Valmor",
@@ -18025,7 +18095,7 @@
     // vendor: vendor,
     // style: style
     yeah: function yeah() {
-      newArrowCheck(this, _this$7);
+      newArrowCheck(this, _this$8);
 
       console.log("╭∩╮( ͡° ͜ʖ ͡° ͜)╭∩╮");
     }.bind(undefined) // aee: aee()
@@ -18050,6 +18120,7 @@
       // document.dispatchEvent(event)
     }, false);
   }();
-  console.log("🔥");
+  console.log("🔥"); // Mustache
+   // var output = Mustache.render("{{title}} spends {{calc}}", view)
 
 })));

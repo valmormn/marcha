@@ -1,9 +1,7 @@
+var express = require("express")
+var app = express()
 
-
-var express = require('express');
-var app = express();
-
-console.log('node server with express');
+// console.log('node server with express');
 
 // app.use('/', (req, res) => {
 //   res.status(200).send('La API funciona correctamente333w \n');

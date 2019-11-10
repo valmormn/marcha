@@ -4,19 +4,18 @@
 // const exec = require('child_process');
 
 // var fs = require("fs");
-const fs = require("fs-extra");
+const fs = require("fs-extra")
 // var sass = require("node-sass");
 // var browserify = require("browserify");
 // var babelify = require("babelify");
 
+const express = require("express")
 
-const express = require("express");
+let server = require("./scripts/server.js")
 
-let server = require("./scripts/server.js");
+const chalk = require("chalk")
 
-const chalk = require("chalk");
-
-// 
+//
 // Sync:
 // try {
 //   fs.copySync("/src/**/*.html", "/dist/");
@@ -28,43 +27,45 @@ const chalk = require("chalk");
 // Async/Await:
 async function copyFiles() {
   try {
-    await fs.copySync("src/**/*.html", "dist/");
-    console.log("success!");
+    await fs.copySync("src/**/*.html", "dist/")
+    console.log("success!")
   } catch (err) {
-    console.error(err);
+    console.error(err)
   }
 }
 
-copyFiles();
+copyFiles()
 
 // chalk
-const log = console.log;
+const log = console.log
 
 // Combine styled and normal strings
-log(chalk.blue("Hello") + " World" + chalk.red("!"));
+log(chalk.blue("Hello") + " World" + chalk.red("!"))
 
 // Compose multiple styles using the chainable API
-log(chalk.blue.bgRed.bold("Hello world!"));
+log(chalk.blue.bgRed.bold("Hello world!"))
 
 // Pass in multiple arguments
-log(chalk.blue("Hello", "World!", "Foo", "bar", "biz", "baz"));
+log(chalk.blue("Hello", "World!", "Foo", "bar", "biz", "baz"))
 
 // Nest styles
-log(chalk.red("Hello", chalk.underline.bgBlue("world") + "!"));
+log(chalk.red("Hello", chalk.underline.bgBlue("world") + "!"))
 
 // Nest styles of the same type even (color, underline, background)
-log(chalk.green(
-  "I am a green line " +
-  chalk.blue.underline.bold("with a blue substring") +
-  " that becomes green again!"
-));
+log(
+  chalk.green(
+    "I am a green line " +
+      chalk.blue.underline.bold("with a blue substring") +
+      " that becomes green again!"
+  )
+)
 
 // ES2015 template literal
 log(`
 CPU: ${chalk.red("90%")}
 RAM: ${chalk.green("40%")}
 DISK: ${chalk.yellow("70%")}
-`);
+`)
 
 // ES2015 tagged template literal
 // log(chalk `
@@ -74,16 +75,16 @@ DISK: ${chalk.yellow("70%")}
 // `);
 
 // Use RGB colors in terminal emulators that support it.
-log(chalk.keyword('orange')('Yay for orange colored text!'));
-log(chalk.rgb(123, 45, 67).underline('Underlined reddish color'));
-log(chalk.hex('#DEADED').bold('Bold gray!'));
+log(chalk.keyword("orange")("Yay for orange colored text!"))
+log(chalk.rgb(123, 45, 67).underline("Underlined reddish color"))
+log(chalk.hex("#DEADED").bold("Bold gray!"))
 
-console.log(chalk.blue('Hello world!'));
+console.log(chalk.blue("Hello world!"))
 
 // console.log(server.v);
 // console.log(server.wtf);
 
-console.log('main');
+console.log("main")
 
 // browserify({
 //     debug: true
@@ -112,12 +113,11 @@ console.log('main');
 //     // clear();
 //   });
 
-// 
+//
 
 // sass.render({file: scss_filename}, function(err, result) { /* ... */ });
 // OR
 // var result = sass.renderSync({file: scss_filename});
-
 
 // https://github.com/paulmillr/chokidar
 // Watch changes in src directory
@@ -144,10 +144,14 @@ console.log('main');
 // copyfiles([paths], opt, callback);
 // copyfiles(['src/', 'dist/']);
 
-
 let a = () => {
-  console.log('ahhh eu to maluco2222');
+  console.log("ahhh eu to maluco2222")
   return
 }
 
-a();
+a()
+
+// eletrica
+// alvenaria
+// pintura
+// revestimento

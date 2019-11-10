@@ -112,8 +112,19 @@ let afterLoad = () => {
 
 // afterLoad()
 
+document.addEventListener("header", () => {
+  console.log(header)
+
+  var login = document.getElementById("toggleAuth")
+  console.log(login)
+
+  login.addEventListener("click", () => {
+    console.log("click no login")
+  })
+})
+
 export let header = {
   id: "header",
   path: "/app/page/layout/header/header.js",
-  afterLoad: afterLoad(),
+  // afterLoad: afterLoad(),
 }

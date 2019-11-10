@@ -23,10 +23,10 @@ import dev from "rollup-plugin-dev"
 import builtins from "rollup-plugin-node-builtins"
 import globals from "rollup-plugin-node-globals"
 
-// import serve from "rollup-plugin-serve";
+import serve from "rollup-plugin-serve"
+import livereload from "rollup-plugin-livereload"
 // import phpServer from "rollup-plugin-php-server";
 // import browserSync from "rollup-plugin-browsersync";
-// import livereload from "rollup-plugin-livereload";
 
 let graph = require("rollup-plugin-graph")
 let graphOptions = {
@@ -85,23 +85,23 @@ export default {
     // terser(), // minification
     // sass(),
     // scss({output: "dist"}), // ERROR - will output compiled styles to bundle.css,
-    // serve("dist"),
+    serve("dist"),
     // phpServer({
     // port: 17365
     // }),
     // browserSync({
     //   proxy: "localhost:17365"
     // }),
-    // livereload({
-    //   watch: "dist",
-    //   verbose: true, // Disable console output
+    livereload({
+      watch: "dist",
+      verbose: true, // Disable console output
 
-    //   // other livereload options
-    //   // https: {
-    //   //   key: fs.readFileSync("keys/agent2-key.pem"),
-    //   //   cert: fs.readFileSync("keys/agent2-cert.pem")
-    //   // }
-    // }),
+      // other livereload options
+      // https: {
+      //   key: fs.readFileSync("keys/agent2-key.pem"),
+      //   cert: fs.readFileSync("keys/agent2-cert.pem")
+      // }
+    }),
     // graph(),
     // dev("dist/", { port: 3021 }),
     // html({

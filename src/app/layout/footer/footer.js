@@ -43,6 +43,12 @@ let afterLoad = () => {
   })
 }
 
+document.addEventListener("footer", () => {
+  document.querySelector("#go2About").addEventListener("click", () => {
+    console.log("#go2About")
+  })
+})
+
 export let footer = {
   id: "footer",
   path: "/app/layout/footer/footer.js",
