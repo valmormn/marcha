@@ -6,7 +6,7 @@ import { renderEngine, renderEngineX } from "./render-engine.js"
 document.addEventListener(
   "DOMContentLoaded",
   () => {
-    console.log("scanner scanPage")
+    // console.log("scanner scanPage")
     // render.scanner.scanPage()
   },
   false

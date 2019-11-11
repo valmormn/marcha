@@ -2,7 +2,7 @@
 
 document.addEventListener("pageScan", e => {
   // setTimeout( scanPage(), 20 );
-  // console.log(e);
+  console.log(e)
   scanPage()
 })
 
@@ -10,7 +10,7 @@ async function scanPage() {
   // console.log("Escaneando a página em busca de elementos com a classe 'render'");
 
   let elements2Render = []
-  elements2Render = await document.getElementsByClassName("render")
+  elements2Render = document.getElementsByClassName("render")
   elements2Render = Array.from(elements2Render)
 
   if (elements2Render.length > 0) {
@@ -23,10 +23,10 @@ async function scanPage() {
       })
       setTimeout(() => {
         element.dispatchEvent(event)
-      }, 200)
+      }, 100)
     })
   } else {
-    // console.log("nada para carregar por enquanto")
+    console.log("nada para carregar por enquanto")
   }
 }
 

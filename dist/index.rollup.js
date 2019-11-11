@@ -1,10 +1,12 @@
+
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.head.appendChild(r) })(window.document);
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('core-js/stable'), require('rxjs-compat/Observable')) :
   typeof define === 'function' && define.amd ? define(['core-js/stable', 'rxjs-compat/Observable'], factory) :
-  (global = global || self, factory(null, global.Observable$2));
-}(this, (function (stable, Observable$2) { 'use strict';
+  (global = global || self, factory(null, global.Observable));
+}(this, (function (stable, Observable) { 'use strict';
 
-  Observable$2 = Observable$2 && Observable$2.hasOwnProperty('default') ? Observable$2['default'] : Observable$2;
+  Observable = Observable && Observable.hasOwnProperty('default') ? Observable['default'] : Observable;
 
   function _newArrowCheck(innerThis, boundThis) {
     if (innerThis !== boundThis) {
@@ -21,7 +23,7 @@
   document.addEventListener("loadComponentJS", function (e) {
     newArrowCheck(this, _this);
 
-    console.log(e);
+    // console.log(e)
     var loadComponentJS = new CustomEvent(e.srcElement.id, {
       detail: "pageScan",
       bubbles: true,
@@ -822,7 +824,7 @@
     newArrowCheck(this, _this$1);
 
     // setTimeout( scanPage(), 20 );
-    // console.log(e);
+    console.log(e);
     scanPage();
   }.bind(undefined));
 
@@ -843,11 +845,7 @@
             case 0:
               // console.log("Escaneando a página em busca de elementos com a classe 'render'");
               elements2Render = [];
-              _context.next = 3;
-              return document.getElementsByClassName("render");
-
-            case 3:
-              elements2Render = _context.sent;
+              elements2Render = document.getElementsByClassName("render");
               elements2Render = Array.from(elements2Render);
 
               if (elements2Render.length > 0) {
@@ -867,11 +865,13 @@
                     newArrowCheck(this, _this3);
 
                     element.dispatchEvent(event);
-                  }.bind(this), 200);
+                  }.bind(this), 100);
                 }.bind(this));
+              } else {
+                console.log("nada para carregar por enquanto");
               }
 
-            case 6:
+            case 4:
             case "end":
               return _context.stop();
           }
@@ -1365,10 +1365,10 @@
   }().bind(undefined);
 
   var _this$3 = undefined;
-  document.addEventListener("DOMContentLoaded", function () {
-    newArrowCheck(this, _this$3);
+  document.addEventListener("DOMContentLoaded", function () {// console.log("scanner scanPage")
+    // render.scanner.scanPage()
 
-    console.log("scanner scanPage"); // render.scanner.scanPage()
+    newArrowCheck(this, _this$3);
   }.bind(undefined), false);
   var render = {
     id: "render",
@@ -17757,26 +17757,9 @@
   } );
   });
 
-  var Observable = createCommonjsModule(function (module, exports) {
-  function __export(m) {
-      for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-  }
-  Object.defineProperty(exports, "__esModule", { value: true });
-  __export(Observable$2);
-  //# sourceMappingURL=Observable.js.map
-  });
-
-  var Observable$1 = unwrapExports(Observable);
-
-  var Rx = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    'default': Observable$1,
-    __moduleExports: Observable
-  });
-
   // imports
   window.$ = window.jQuery = jquery;
-  console.log(Rx); // import React from "react"
+  // import React from "react"
   // import ReactDOM from "react-dom"
   //
   // import * as Tone from "ton/e"
@@ -17805,156 +17788,60 @@
     id: "style"
   };
 
-  var _this2 = undefined;
+  var _this$6 = undefined;
 
-  var afterLoad$1 = function afterLoad() {
-    var _this3 = this;
-
-    newArrowCheck(this, _this2);
-
-    // console.log("afterLoad")
-    document.addEventListener("DOMContentLoaded", function () {
-      var _this4 = this;
-
-      newArrowCheck(this, _this3);
-
-      // console.log("wtf")
-      // console.log("headerComponent")
-      // console.log(v)
-      // Object.defineProperty(window.v.route, "header", {
-      //   value: {
-      //     name: "headerComponent",
-      //     path: "/app/layout/header/header.html",
-      //     title: "header",
-      //   },
-      //   // value: (start, end, step = 1) => {
-      //   //   const length = Math.floor(Math.abs((end - start) / step)) + 1
-      //   //   return Array.from(Array(length), (x, index) => start + index * step)
-      //   // },
-      //   writable: false,
-      //   enumerable: true,
-      // })
-      // window.v.route.header = {
-      //   name: "headerComponent",
-      //   path: "/app/layout/header/header.html",
-      //   title: "header",
-      // }
-      var as =
-      /*#__PURE__*/
-      function () {
-        var _as = asyncToGenerator(
-        /*#__PURE__*/
-        regenerator.mark(function _callee() {
-          return regenerator.wrap(function _callee$(_context) {
-            while (1) {
-              switch (_context.prev = _context.next) {
-                case 0:
-                  newArrowCheck(this, _this4);
-
-                  window.onload = function () {
-                    var _this5 = this;
-
-                    // var refButton = document.getElementById("btnButton")
-                    // refButton.onclick = function() {
-                    //   alert("I am clicked!")
-                    // }
-                    console.log("ayn"); //
-
-                    var login = document.getElementById("toggleAuth");
-                    console.log(login);
-                    login.addEventListener("click", function () {
-                      var _this6 = this;
-
-                      newArrowCheck(this, _this5);
-
-                      // console.log("click login");
-                      var isConnected = function isConnected() {
-                        newArrowCheck(this, _this6);
-
-                        console.log("loged in as user: ");
-                      }.bind(this);
-
-                      var notConnected = function notConnected() {
-                        newArrowCheck(this, _this6);
-
-                        window.history.pushState({}, "login", "  ?=login"); // renderX("main", "./app/auth/auth.html");
-
-                        var destino = "app/user/auth/login/login.html";
-                        window.render("main", destino);
-                        var event = new CustomEvent("login", {
-                          detail: {
-                            message: "Hello World!",
-                            time: new Date()
-                          },
-                          bubbles: true,
-                          cancelable: true
-                        });
-                        document.dispatchEvent(event);
-                      }.bind(this); //
-
-                      {
-                        console.log("notConnected"); // notConnected()
-                      } //
-
-                    }.bind(this));
-                  }; //
-                  // var halfmoon = document.getElementById("halfmoon")
-                  // console.log(halfmoon)
-                  // halfmoon.addEventListener("click", () => {
-                  //   console.log(halfmoon)
-                  //   // console.log("click halfmoon")
-                  //   // window.history.pushState({}, "auth", "  ?=auth");
-                  //   // renderX("main", "./app/auth/auth.html");
-                  // })
-
-
-                case 2:
-                case "end":
-                  return _context.stop();
-              }
-            }
-          }, _callee, this);
-        }));
-
-        function as() {
-          return _as.apply(this, arguments);
-        }
-
-        return as;
-      }().bind(this);
-
-      as().then(console.log("log then")); // setTimeout(() => {
-      // }, 1000)
-    }.bind(this));
-  }.bind(undefined); // afterLoad()
-
-
+  // hearder.js
   document.addEventListener("header", function () {
-    var _this7 = this;
+    var _this2 = this;
 
-    newArrowCheck(this, _this2);
+    newArrowCheck(this, _this$6);
 
-    console.log(header);
+    // console.log(header)
     var login = document.getElementById("toggleAuth");
-    console.log(login);
     login.addEventListener("click", function () {
-      newArrowCheck(this, _this7);
+      var _this3 = this;
 
-      console.log("click no login");
+      newArrowCheck(this, _this2);
+
+      var main = document.getElementById("main");
+      main.innerHTML = "<div id=\"login\" class=\"render\" data-component=\"login\" data-path=\"app/user/auth/login/login.html\"></div>";
+      var event = new CustomEvent("pageScan", {
+        detail: "pageScan",
+        bubbles: true,
+        cancelable: false
+      });
+      setTimeout(function () {
+        newArrowCheck(this, _this3);
+
+        login.dispatchEvent(event);
+      }.bind(this), 100);
+    }.bind(this));
+    var halfmoon = document.getElementById("halfmoon"); // console.log(halfmoon)
+
+    halfmoon.addEventListener("click", function () {
+      newArrowCheck(this, _this2);
+      // window.history.pushState({}, "auth", "  ?=auth");
+      // renderX("main", "./app/auth/auth.html");
     }.bind(this));
   }.bind(undefined));
-  var header = {
-    id: "header",
-    path: "/app/page/layout/header/header.js" // afterLoad: afterLoad(),
 
-  };
+  var _this$7 = undefined;
 
-  var _this$6 = undefined;
+  // main
+  document.addEventListener("main", function () {// console.log("#main2")
+    // document.querySelector("#go2About").addEventListener("click", () => {
+    //   console.log("#go2About")
+    // })
+
+    newArrowCheck(this, _this$7);
+  }.bind(undefined));
+
+  var _this$8 = undefined;
 
   // footer.js
   // import { rendererX } from "../../../sys/js/render/renderer";
-  var afterLoad$2 = function afterLoad() {
-    newArrowCheck(this, _this$6);
+  var afterLoad$1 = function afterLoad() {
+    newArrowCheck(this, _this$8);
 
     document.addEventListener("DOMContentLoaded", function () {
       var _this2 = this;
@@ -18031,21 +17918,42 @@
   document.addEventListener("footer", function () {
     var _this7 = this;
 
-    newArrowCheck(this, _this$6);
+    newArrowCheck(this, _this$8);
 
     document.querySelector("#go2About").addEventListener("click", function () {
+      var _this8 = this;
+
       newArrowCheck(this, _this7);
 
       console.log("#go2About");
+      var about = document.getElementById("go2About");
+      about.addEventListener("click", function () {
+        var _this9 = this;
+
+        newArrowCheck(this, _this8);
+
+        var main = document.getElementById("main");
+        main.innerHTML = "<div id=\"about\" class=\"render\" data-component=\"about\" data-path=\"app/page/about/about.html\"></div>";
+        var event = new CustomEvent("pageScan", {
+          detail: "pageScan",
+          bubbles: true,
+          cancelable: false
+        });
+        setTimeout(function () {
+          newArrowCheck(this, _this9);
+
+          about.dispatchEvent(event);
+        }.bind(this), 100);
+      }.bind(this));
     }.bind(this));
   }.bind(undefined));
   var footer = {
     id: "footer",
     path: "/app/layout/footer/footer.js",
-    afterLoad: afterLoad$2()
+    afterLoad: afterLoad$1()
   };
 
-  var _this$7 = undefined;
+  var _this$9 = undefined;
   // console.log("app.js")
   // class LikeButton extends React.Component {
   //   constructor(props) {
@@ -18066,21 +17974,20 @@
   // const domContainer = document.querySelector('#like_button_container');
   // ReactDOM.render(e(LikeButton), domContainer);
 
-  document.addEventListener("app", function () {
-    newArrowCheck(this, _this$7);
+  document.addEventListener("app", function () {// console.log("ah moleque!")
 
-    console.log("ah moleque!");
+    newArrowCheck(this, _this$9);
   }.bind(undefined));
   var app = {
     id: "app",
     f: function f() {
-      newArrowCheck(this, _this$7);
+      newArrowCheck(this, _this$9);
 
       console.log("inside app.js!");
     }.bind(undefined)
   };
 
-  var _this$8 = undefined;
+  var _this$a = undefined;
   window.v = {
     name: "web-graphics",
     author: "Valmor",
@@ -18095,7 +18002,7 @@
     // vendor: vendor,
     // style: style
     yeah: function yeah() {
-      newArrowCheck(this, _this$8);
+      newArrowCheck(this, _this$a);
 
       console.log("╭∩╮( ͡° ͜ʖ ͡° ͜)╭∩╮");
     }.bind(undefined) // aee: aee()
@@ -18105,8 +18012,8 @@
     document.addEventListener("DOMContentLoaded", function () {
       var _this2 = this;
 
-      window.app = window.v;
-      window.v.yeah() // hljs.initHighlightingOnLoad(); // isso nao ta funcionando... CORRIGIR
+      window.app = window.v // window.v.yeah()
+      // hljs.initHighlightingOnLoad(); // isso nao ta funcionando... CORRIGIR
       // document.querySelectorAll('pre code').forEach((block) => {
       //   hljs.highlightBlock(block);
       // });
@@ -18120,7 +18027,6 @@
       // document.dispatchEvent(event)
     }, false);
   }();
-  console.log("🔥"); // Mustache
-   // var output = Mustache.render("{{title}} spends {{calc}}", view)
+  console.log("🔥");
 
 })));

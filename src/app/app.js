@@ -29,7 +29,7 @@ import { layout } from "./layout/layout.js"
 // ReactDOM.render(e(LikeButton), domContainer);
 
 document.addEventListener("app", () => {
-  console.log("ah moleque!")
+  // console.log("ah moleque!")
 })
 
 export let app = {

@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA,UAAU;AAEV,KAAM;EACJ,KAAK,EAAE,GAAG",
-"sources": ["../../../../src/app/layout/main/main.scss"],
-"names": [],
-"file": "main.css"
-}
+{"version":3,"sourceRoot":"","sources":["../../../../src/app/layout/main/main.scss"],"names":[],"mappings":"AAAA","file":"main.css"}

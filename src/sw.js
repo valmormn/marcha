@@ -1,6 +1,6 @@
 // Service Worker
 
-console.log("service worker is inthahouse!");
+// console.log("service worker is inthahouse!");
 
 // After install, fetch event is triggered for every page request
 self.addEventListener("fetch", function(event) {
@@ -12,12 +12,12 @@ self.addEventListener("fetch", function(event) {
       .match(event.request) //To match current request with cached request it
       .then(function(response) {
         //If response found return it, else fetch again.
-        return response || fetch(event.request);
+        return response || fetch(event.request)
       })
       .catch(function(error) {
-        console.error("Error: ", error);
+        console.error("Error: ", error)
       })
-  );
-});
+  )
+})
 
 // https://gist.github.com/gokulkrishh/1b47bad975eed2f50f66

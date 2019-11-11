@@ -1,0 +1,9 @@
+/* auth */
+
+@import "./login/login.scss";
+
+#loginx {
+  display: flex;
+  flex-flow: column;
+  max-width: 400px;
+}

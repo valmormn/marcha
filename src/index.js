@@ -29,7 +29,7 @@ window.v = {
     "DOMContentLoaded",
     function() {
       window.app = window.v
-      window.v.yeah()
+      // window.v.yeah()
 
       // hljs.initHighlightingOnLoad(); // isso nao ta funcionando... CORRIGIR
 
@@ -52,13 +52,3 @@ window.v = {
 })()
 
 console.log("🔥")
-
-// Mustache
-var view = {
-  title: "Joe",
-  calc: function() {
-    return 2 + 4
-  },
-}
-
-// var output = Mustache.render("{{title}} spends {{calc}}", view)

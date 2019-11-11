@@ -1,0 +1,22 @@
+/* login */
+
+#login-form,
+#signup-form {
+  width: auto;
+  max-width: 400px !important;
+  /* color: crimson !important; */
+  /* background-color: aqua !important; */
+}
+
+.lahorizontal {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: center;
+  /* justify-items: stretch; */
+  align-items: baseline;
+}
+
+.lahorizontal div {
+  padding: 2px 12px;
+}

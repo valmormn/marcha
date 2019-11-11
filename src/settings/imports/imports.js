@@ -11,7 +11,7 @@ window.$ = window.jQuery = jquery
 import { popper } from "popper.js"
 
 import * as Rx from "rxjs/Observable"
-console.log(Rx)
+// console.log(Rx)
 
 // import React from "react"
 // import ReactDOM from "react-dom"

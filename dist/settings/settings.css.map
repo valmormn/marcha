@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA,iBAAiB",
-"sources": ["../../src/settings/settings.scss"],
-"names": [],
-"file": "settings.css"
-}
+{"version":3,"sourceRoot":"","sources":["../../src/settings/settings.scss"],"names":[],"mappings":"AAAA","file":"settings.css"}

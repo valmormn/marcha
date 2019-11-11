@@ -2,7 +2,7 @@
 
 // loadComponentJS
 document.addEventListener("loadComponentJS", e => {
-  console.log(e)
+  // console.log(e)
 
   var loadComponentJS = new CustomEvent(e.srcElement.id, {
     detail: "pageScan",

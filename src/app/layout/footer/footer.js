@@ -46,6 +46,19 @@ let afterLoad = () => {
 document.addEventListener("footer", () => {
   document.querySelector("#go2About").addEventListener("click", () => {
     console.log("#go2About")
+    var about = document.getElementById("go2About")
+    about.addEventListener("click", () => {
+      let main = document.getElementById("main")
+      main.innerHTML = `<div id="about" class="render" data-component="about" data-path="app/page/about/about.html"></div>`
+      var event = new CustomEvent("pageScan", {
+        detail: "pageScan",
+        bubbles: true,
+        cancelable: false,
+      })
+      setTimeout(() => {
+        about.dispatchEvent(event)
+      }, 100)
+    })
   })
 })
 

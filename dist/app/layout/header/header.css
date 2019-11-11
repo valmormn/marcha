@@ -8,19 +8,23 @@
   align-content: center;
   justify-content: space-between;
   vertical-align: middle !important;
-  /* background-color: var(--bg); */ }
+  /* background-color: var(--bg); */
+}
 
 #logo {
-  font-size: 22px; }
+  font-size: 22px;
+}
 
 #halfmoon,
 #login,
 #bars {
   cursor: pointer;
-  padding: 0px 12px 0px 12px; }
+  padding: 0px 12px 0px 12px;
+}
 
 .dedao {
-  padding: 0px 12px; }
+  padding: 0px 12px;
+}
 
 /* header>div>* { */
 /* padding: 0 12px 0 12px;

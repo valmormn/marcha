@@ -1,19 +1,23 @@
 // main.js
 
+// var fs = require("fs");
+const fs = require("fs-extra")
+const chalk = require("chalk")
+
 // const chokidar = require('chokidar');
 // const exec = require('child_process');
 
-// var fs = require("fs");
-const fs = require("fs-extra")
 // var sass = require("node-sass");
 // var browserify = require("browserify");
 // var babelify = require("babelify");
 
-const express = require("express")
-
 let server = require("./scripts/server/server.js")
 
-const chalk = require("chalk")
+const express = require("express");
+// const next = require("next");
+// const dev = process.env.NODE_ENV !== "production";
+// const app = next({ dir: ".", dev });
+// const handle = app.getRequestHandler();
 
 const log = console.log
 

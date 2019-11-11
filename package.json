@@ -8,7 +8,7 @@
     "build": "node ./scripts/build.js",
     "deploy": "echo syncronize dist with server trough scp",
     "dev_": "node ./scripts/dev.js",
-    "dev": "npm r un html && npm run php && npm run sass && npm run rollup",
+    "dev": "npm run html && npm run php && sass src:dist && npm run rollup",
     "etaporra": "npm run html & npm run css & npm run js &",
     "gzip": "echo zipa todos os arquivos da pasta dist/",
     "htm": "cp -Ri src/*.html src",
