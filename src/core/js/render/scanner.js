@@ -1,8 +1,6 @@
 // scanner.js
 
 document.addEventListener("pageScan", e => {
-  // setTimeout( scanPage(), 20 );
-  console.log(e)
   scanPage()
 })
 
@@ -23,21 +21,17 @@ async function scanPage() {
       })
       setTimeout(() => {
         element.dispatchEvent(event)
-      }, 100)
+      }, 10)
     })
   } else {
-    console.log("nada para carregar por enquanto")
+    // console.log("nada para carregar por enquanto")
   }
 }
 
 function afterLoad() {
-  // console.log("hey");
-
-  document.addEventListener("DOMContentLoaded", function() {
-    // console.log('scannerx');
-    // Primeira escaneada no documento
-    // pra carregar os primeiros componentes na pagina
-    // scanPage()
+  //
+  document.addEventListener("DOMContentLoaded", e => {
+    console.log(e)
   })
 }
 

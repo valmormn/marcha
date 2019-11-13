@@ -29,7 +29,7 @@ window.v = {
     "DOMContentLoaded",
     function() {
       window.app = window.v
-      // window.v.yeah()
+      window.v.yeah()
 
       // hljs.initHighlightingOnLoad(); // isso nao ta funcionando... CORRIGIR
 

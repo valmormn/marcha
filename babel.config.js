@@ -11,24 +11,24 @@ const presets = [
         // firefox: "40",
         // chrome: "47",
         // safari: "7.1",
-        browsers: ["last 12 versions"]
+        browsers: ["last 3 versions"],
       },
       corejs: 3,
       modules: false,
       // useBuiltIns: "usage"
-      useBuiltIns: "false"
-    }
-  ]
-];
+      useBuiltIns: "false",
+    },
+  ],
+]
 
 const plugins = [
   // ["@babel/transform-arrow-functions"],
-  [
-    "@babel/plugin-transform-arrow-functions",
-    {
-      spec: true
-    }
-  ],
+  // [
+  //   "@babel/plugin-transform-arrow-functions",
+  //   {
+  //     spec: true
+  //   }
+  // ],
   ["transform-imports"],
   // ["@babel/transform-runtime"],
   [
@@ -38,11 +38,11 @@ const plugins = [
       corejs: false,
       helpers: true,
       regenerator: true,
-      useESModules: false
-    }
-  ]
+      useESModules: false,
+    },
+  ],
   // ["@babel/external-helpers"],
-];
+]
 
 const overrides = [
   // {
@@ -55,12 +55,12 @@ const overrides = [
     test: ["./tests"],
     presets: [
       // config for tests
-    ]
-  }
-];
+    ],
+  },
+]
 
 module.exports = {
   presets,
   plugins,
-  overrides
-};
+  overrides,
+}

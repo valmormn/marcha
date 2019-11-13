@@ -45,7 +45,7 @@ let afterLoad = () => {
 
 document.addEventListener("footer", () => {
   document.querySelector("#go2About").addEventListener("click", () => {
-    console.log("#go2About")
+    // console.log("#go2About")
     var about = document.getElementById("go2About")
     about.addEventListener("click", () => {
       let main = document.getElementById("main")
@@ -58,6 +58,23 @@ document.addEventListener("footer", () => {
       setTimeout(() => {
         about.dispatchEvent(event)
       }, 100)
+    })
+
+    // toggleAuthFooter
+    var toggleAuthFooter = document.getElementById("toggleAuthF")
+    // console.log(toggleAuthFooter);
+
+    toggleAuthFooter.addEventListener("click", async () => {
+      // await window.renderXX("main", window.route.login, () => {
+      //   //
+      //   // console.log("ta foda")
+      // })
+
+      // window.renderY ("main", window.route.login, ()=>{})
+
+      console.log("toggleAuthFooter")
+
+      return false
     })
   })
 })

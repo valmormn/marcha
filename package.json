@@ -40,6 +40,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
     "@babel/runtime": "^7.6.3",
+    "async": "^3.1.0",
+    "async-es": "^2.6.3",
     "babylonjs": "^4.0.3",
     "bootstrap": "^4.3.1",
     "highlight.js": "^9.15.10",

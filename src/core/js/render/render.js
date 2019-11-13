@@ -1,7 +1,7 @@
 // render.js
 
 import { scanner } from "./scanner.js"
-import { renderEngine, renderEngineX } from "./render-engine.js"
+import { renderEngine } from "./render-engine.js"
 
 document.addEventListener(
   "DOMContentLoaded",
@@ -16,5 +16,5 @@ export let render = {
   id: "render",
   scanner: scanner,
   renderEngine: renderEngine,
-  renderEngineX: renderEngineX,
+  // renderEngineX: renderEngineX,
 }

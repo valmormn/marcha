@@ -6,7 +6,12 @@ document.addEventListener("header", () => {
   var login = document.getElementById("toggleAuth")
   login.addEventListener("click", () => {
     let main = document.getElementById("main")
-    main.innerHTML = `<div id="login" class="render" data-component="login" data-path="app/user/auth/login/login.html"></div>`
+    main.innerHTML = `<div 
+    id="login" 
+    class="render" 
+    data-component="login" 
+    data-path="app/user/auth/login/login.html">
+    </div>`
     var event = new CustomEvent("pageScan", {
       detail: "pageScan",
       bubbles: true,

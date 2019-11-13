@@ -11,6 +11,9 @@
   vertical-align: middle !important;
   /* background-color: var(--bg); */
 }
+#header * {
+  padding: 0px 4px;
+}
 
 #logo {
   font-size: 22px;
