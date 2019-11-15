@@ -1,5 +1,38 @@
 // mouse.js
 
+document.addEventListener("click", e => {
+  console.log(e)
+  if (
+    e.srcElement.tagName === "A" ||
+    e.srcElement.parentElement.tagName === "A"
+  ) {
+    clickControllerX(e)
+      .then(console.log("1 one more time"))
+      .catch(e => {
+        console.error()
+        console.log("4")
+        console.log(e)
+        console.log(1 + 4)
+      })
+      .then(console.log("2 wtf doidao!"))
+      .finally(console.log("3 duuuuude!"))
+  } else {
+    console.log(e.srcElement)
+  }
+})
+
+let clickControllerX = async e => {
+  e.stopPropagation()
+  e.preventDefault()
+  console.log(e.srcElement.dataset.link)
+  console.log(e.srcElement.dataset.path)
+  console.log(e.srcElement)
+
+  throw new Error("mose.js - Thrown from thisThrows()")
+
+  // return
+}
+
 let clickController = () => {
   document.addEventListener("click", e => {
     console.log(e)
@@ -13,8 +46,7 @@ let clickController = () => {
         console.log(e.srcElement.dataset.link)
         console.log(e.srcElement.dataset.path)
       } else {
-        console.log("wtf");
-        
+        console.log("wtf")
       }
     } catch (error) {
       // console.error(error)
@@ -32,7 +64,7 @@ let afterLoad = () => {
 // console.log("mouse")
 
 // afterLoad();
-clickController()
+// clickController()
 
 export let mouse = {
   id: "mouse",

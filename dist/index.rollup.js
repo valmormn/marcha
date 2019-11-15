@@ -1133,6 +1133,51 @@
 	};
 
 	// mouse.js
+	document.addEventListener("click", function (e) {
+	  console.log(e);
+
+	  if (e.srcElement.tagName === "A" || e.srcElement.parentElement.tagName === "A") {
+	    clickControllerX(e).then(console.log("1 one more time"))["catch"](function (e) {
+	      console.error();
+	      console.log("4");
+	      console.log(e);
+	      console.log(1 + 4);
+	    }).then(console.log("2 wtf doidao!"))["finally"](console.log("3 duuuuude!"));
+	  } else {
+	    console.log(e.srcElement);
+	  }
+	});
+
+	var clickControllerX =
+	/*#__PURE__*/
+	function () {
+	  var _ref = asyncToGenerator(
+	  /*#__PURE__*/
+	  regenerator.mark(function _callee(e) {
+	    return regenerator.wrap(function _callee$(_context) {
+	      while (1) {
+	        switch (_context.prev = _context.next) {
+	          case 0:
+	            e.stopPropagation();
+	            e.preventDefault();
+	            console.log(e.srcElement.dataset.link);
+	            console.log(e.srcElement.dataset.path);
+	            console.log(e.srcElement);
+	            throw new Error("mose.js - Thrown from thisThrows()");
+
+	          case 6:
+	          case "end":
+	            return _context.stop();
+	        }
+	      }
+	    }, _callee);
+	  }));
+
+	  return function clickControllerX(_x) {
+	    return _ref.apply(this, arguments);
+	  };
+	}();
+
 	var clickController = function clickController() {
 	  document.addEventListener("click", function (e) {
 	    console.log(e);
@@ -1157,9 +1202,9 @@
 	  });
 	}; // console.log("mouse")
 	// afterLoad();
+	// clickController()
 
 
-	clickController();
 	var mouse = {
 	  id: "mouse",
 	  afterLoad: afterLoad$1,
