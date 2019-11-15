@@ -9655,6 +9655,7 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/* admin */
 /* layout */
 /* header */
 #header {
@@ -9707,6 +9708,12 @@ h3 {
   } */
 /* main */
 /* footer */
+/* about */
+#about {
+  max-width: 600px;
+}
+
+/* home */
 /* user */
 /* auth */
 /* login */

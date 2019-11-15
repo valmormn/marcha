@@ -842,12 +842,14 @@
 	  _scanPage = asyncToGenerator(
 	  /*#__PURE__*/
 	  regenerator.mark(function _callee() {
-	    var elements2Render;
+	    var a, elements2Render;
 	    return regenerator.wrap(function _callee$(_context) {
 	      while (1) {
 	        switch (_context.prev = _context.next) {
 	          case 0:
 	            // console.log("Escaneando a página em busca de elementos com a classe 'render'");
+	            a = document.querySelectorAll("[data-render]");
+	            console.log(a);
 	            elements2Render = [];
 	            elements2Render = document.getElementsByClassName("render");
 	            elements2Render = Array.from(elements2Render);
@@ -867,7 +869,7 @@
 	              });
 	            }
 
-	          case 4:
+	          case 6:
 	          case "end":
 	            return _context.stop();
 	        }
@@ -877,10 +879,17 @@
 	  return _scanPage.apply(this, arguments);
 	}
 
+	function afterLoad() {
+	  //
+	  document.addEventListener("DOMContentLoaded", function (e) {
+	    console.log(e);
+	  });
+	}
+
 	var scanner = {
 	  id: "scanner",
 	  path: "core/js/render/scanner.js",
-	  // afterLoad: afterLoad(),
+	  afterLoad: afterLoad(),
 	  scanPage: scanPage()
 	};
 
@@ -1127,10 +1136,18 @@
 	var clickController = function clickController() {
 	  document.addEventListener("click", function (e) {
 	    console.log(e);
+
+	    if (e.srcElement.tagName === "A") {
+	      e.preventDefault();
+	      e.stopPropagation();
+	      console.log(e.srcElement);
+	    } else {
+	      return;
+	    }
 	  });
 	};
 
-	var afterLoad = function afterLoad() {
+	var afterLoad$1 = function afterLoad() {
 	  document.addEventListener("DOMContentLoaded", function () {// console.log("mouse2")
 	    // clickController()
 	  });
@@ -1141,7 +1158,7 @@
 	clickController();
 	var mouse = {
 	  id: "mouse",
-	  afterLoad: afterLoad,
+	  afterLoad: afterLoad$1,
 	  clickController: clickController
 	};
 
@@ -25580,21 +25597,7 @@
 
 	var imports = {
 	  id: "imports"
-	}; // console.log("imports")
-	var promise = new Promise(function (resolve, reject) {
-	  reject(new Error("…"));
-	});
-
-	var checkIfDone = function checkIfDone() {
-	  promise.then(function (ok) {
-	    console.log(ok);
-	  })["catch"](function (err) {
-	    console.log(err);
-	    console.error("Deu ruim!");
-	  });
 	};
-
-	checkIfDone();
 
 	// settings.js
 	// import { async } from "async";
@@ -25644,7 +25647,7 @@
 
 	// footer.js
 	// import { rendererX } from "../../../sys/js/render/renderer";
-	var afterLoad$1 = function afterLoad() {
+	var afterLoad$2 = function afterLoad() {
 	  document.addEventListener("DOMContentLoaded", function () {
 	    // console.log('footerComponent');
 	    // window.route.footer = {
@@ -25743,7 +25746,7 @@
 	var footer = {
 	  id: "footer",
 	  path: "/app/layout/footer/footer.js",
-	  afterLoad: afterLoad$1()
+	  afterLoad: afterLoad$2()
 	};
 
 	// app.js

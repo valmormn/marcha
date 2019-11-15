@@ -35,26 +35,3 @@ import "bootstrap"
 export let imports = {
   id: "imports",
 }
-
-// console.log("imports")
-const images = { cat: "/cat.png", dog: "/dog.png", duck: "/duck.png" }
-const sizes = {}
-
-let promise = new Promise((resolve, reject) => {
-  if (1 === 2) resolve("done")
-  else reject(new Error("…"))
-})
-
-const checkIfDone = () => {
-  promise
-    .then(ok => {
-      console.log(ok)
-    })
-    .catch(err => {
-      console.log(err)
-
-      console.error("Deu ruim!")
-    })
-}
-
-checkIfDone()

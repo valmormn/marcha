@@ -3,6 +3,13 @@
 let clickController = () => {
   document.addEventListener("click", e => {
     console.log(e)
+    if (e.srcElement.tagName === "A") {
+      e.preventDefault()
+      e.stopPropagation()
+      console.log(e.srcElement)
+    } else {
+      return
+    }
   })
 }
 

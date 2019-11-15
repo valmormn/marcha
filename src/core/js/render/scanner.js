@@ -6,6 +6,8 @@ document.addEventListener("pageScan", e => {
 
 async function scanPage() {
   // console.log("Escaneando a página em busca de elementos com a classe 'render'");
+  let a = document.querySelectorAll("[data-render]")
+  console.log(a)
 
   let elements2Render = []
   elements2Render = document.getElementsByClassName("render")
@@ -38,6 +40,6 @@ function afterLoad() {
 export let scanner = {
   id: "scanner",
   path: "core/js/render/scanner.js",
-  // afterLoad: afterLoad(),
+  afterLoad: afterLoad(),
   scanPage: scanPage(),
 }
