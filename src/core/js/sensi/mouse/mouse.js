@@ -3,12 +3,21 @@
 let clickController = () => {
   document.addEventListener("click", e => {
     console.log(e)
-    if (e.srcElement.tagName === "A") {
-      e.preventDefault()
-      e.stopPropagation()
-      console.log(e.srcElement)
-    } else {
-      return
+    try {
+      if (
+        e.srcElement.tagName === "A" ||
+        e.srcElement.parentElement.tagName === "A"
+      ) {
+        e.stopPropagation()
+        e.preventDefault()
+        console.log(e.srcElement.dataset.link)
+        console.log(e.srcElement.dataset.path)
+      } else {
+        console.log("wtf");
+        
+      }
+    } catch (error) {
+      // console.error(error)
     }
   })
 }
