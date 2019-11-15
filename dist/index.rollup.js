@@ -25617,9 +25617,6 @@
 	};
 
 	// settings.js
-	// import { async } from "async";
-	// import PropTypes from 'prop-types';
-
 	var settings = {
 	  id: "settings",
 	  appName: "dev",
