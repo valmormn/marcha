@@ -1134,17 +1134,17 @@
 
 	// mouse.js
 	document.addEventListener("click", function (e) {
-	  console.log(e);
+	  console.log(e.srcElement);
 
 	  if (e.srcElement.tagName === "A" || e.srcElement.parentElement.tagName === "A") {
-	    clickControllerX(e).then(console.log("1 one more time"))["catch"](function (e) {
-	      console.error();
-	      console.log("4");
-	      console.log(e);
-	      console.log(1 + 4);
-	    }).then(console.log("2 wtf doidao!"))["finally"](console.log("3 duuuuude!"));
-	  } else {
-	    console.log(e.srcElement);
+	    clickControllerX(e).then(function () {// console.log("1 one more time")
+	    })["catch"](function (e) {
+	      // console.error()
+	      // console.log("4")
+	      console.log(e); // console.log(1 + 4)
+	    }).then(function () {// console.log("2 wtf doidao!")
+	    })["finally"](function () {// console.log("3 duuuuude!")
+	    });
 	  }
 	});
 
@@ -1158,14 +1158,6 @@
 	      while (1) {
 	        switch (_context.prev = _context.next) {
 	          case 0:
-	            e.stopPropagation();
-	            e.preventDefault();
-	            console.log(e.srcElement.dataset.link);
-	            console.log(e.srcElement.dataset.path);
-	            console.log(e.srcElement);
-	            throw new Error("mose.js - Thrown from thisThrows()");
-
-	          case 6:
 	          case "end":
 	            return _context.stop();
 	        }
@@ -1177,38 +1169,14 @@
 	    return _ref.apply(this, arguments);
 	  };
 	}();
-
-	var clickController = function clickController() {
-	  document.addEventListener("click", function (e) {
-	    console.log(e);
-
-	    try {
-	      if (e.srcElement.tagName === "A" || e.srcElement.parentElement.tagName === "A") {
-	        e.stopPropagation();
-	        e.preventDefault();
-	        console.log(e.srcElement.dataset.link);
-	        console.log(e.srcElement.dataset.path);
-	      } else {
-	        console.log("wtf");
-	      }
-	    } catch (error) {// console.error(error)
-	    }
-	  });
-	};
-
-	var afterLoad$1 = function afterLoad() {
-	  document.addEventListener("DOMContentLoaded", function () {// console.log("mouse2")
-	    // clickController()
-	  });
-	}; // console.log("mouse")
 	// afterLoad();
 	// clickController()
 
 
 	var mouse = {
-	  id: "mouse",
-	  afterLoad: afterLoad$1,
-	  clickController: clickController
+	  id: "mouse" // afterLoad: afterLoad,
+	  // clickController: clickController,
+
 	};
 
 	// sensi.js
@@ -25696,7 +25664,7 @@
 
 	// footer.js
 	// import { rendererX } from "../../../sys/js/render/renderer";
-	var afterLoad$2 = function afterLoad() {
+	var afterLoad$1 = function afterLoad() {
 	  document.addEventListener("DOMContentLoaded", function () {
 	    // console.log('footerComponent');
 	    // window.route.footer = {
@@ -25795,7 +25763,7 @@
 	var footer = {
 	  id: "footer",
 	  path: "/app/layout/footer/footer.js",
-	  afterLoad: afterLoad$2()
+	  afterLoad: afterLoad$1()
 	};
 
 	// app.js
