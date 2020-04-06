@@ -31,7 +31,7 @@ document.addEventListener("header", () => {
       target: "main",
       path: "app/page/about/about.html",
     }
-    // console.log("click halfmoon")
+    console.log("click halfmoon")
     // window.history.pushState({}, "auth", "  ?=auth");
     // renderX("main", "./app/auth/auth.html");
   })

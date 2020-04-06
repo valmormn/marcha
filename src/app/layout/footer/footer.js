@@ -15,11 +15,11 @@ let afterLoad = () => {
       var go2About = document.getElementById("go2About")
       // console.log(go2About);
 
-      go2About.addEventListener("click", () => {
-        console.log("click go2About")
-        // window.history.pushState({}, "auth", "about")
-        // renderX("main", "./app/page/about/about.html")
-      })
+      // go2About.addEventListener("click", () => {
+      //   console.log("click go2About")
+      //   // window.history.pushState({}, "auth", "about")
+      //   // renderX("main", "./app/page/about/about.html")
+      // })
     }, 1000)
 
     // Link Entrar

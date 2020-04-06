@@ -13,16 +13,16 @@ const chalk = require("chalk")
 
 let server = require("./scripts/server/server.js")
 
-const express = require("express");
+const express = require("express")
 // const next = require("next");
 // const dev = process.env.NODE_ENV !== "production";
 // const app = next({ dir: ".", dev });
 // const handle = app.getRequestHandler();
 
-const log = console.log
 
 // Combine styled and normal strings
 let x = "Running ./main.js"
+const log = console.log
 log(chalk.blue(x) + chalk.red("!"))
 log(chalk.blue.bgRed.bold("Hello world!"))
 log(chalk.blue("Hello", "World!", "Foo", "bar", "biz", "baz"))
@@ -60,9 +60,10 @@ async function copyFiles() {
 // With async/await:
 async function copyFiles() {
   try {
-    await fs.copy("src/**/*.html", "dist/").then(() => {
-      console.log("success!")
-    })
+    // await fs.copy("./src/**/*.html", "dist/").then(() => {
+    //   console.log("success!")
+    // })
+    console.log("copyfiles")
 
     console.log("success!")
   } catch (err) {

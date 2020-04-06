@@ -25647,7 +25647,7 @@
 	  var halfmoon = document.getElementById("halfmoon"); // console.log(halfmoon)
 
 	  halfmoon.addEventListener("click", function () {
-	    // window.history.pushState({}, "auth", "  ?=auth");
+	    console.log("click halfmoon"); // window.history.pushState({}, "auth", "  ?=auth");
 	    // renderX("main", "./app/auth/auth.html");
 	  });
 	});
@@ -25672,11 +25672,11 @@
 	    // Link Sobre
 	    setTimeout(function () {
 	      var go2About = document.getElementById("go2About"); // console.log(go2About);
-
-	      go2About.addEventListener("click", function () {
-	        console.log("click go2About"); // window.history.pushState({}, "auth", "about")
-	        // renderX("main", "./app/page/about/about.html")
-	      });
+	      // go2About.addEventListener("click", () => {
+	      //   console.log("click go2About")
+	      //   // window.history.pushState({}, "auth", "about")
+	      //   // renderX("main", "./app/page/about/about.html")
+	      // })
 	    }, 1000); // Link Entrar
 
 	    document.addEventListener("footerComponent", function () {
