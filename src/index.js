@@ -1,4 +1,5 @@
 // index.js
+// blablabla
 
 import { core } from "./core/core.js"
 import { settings } from "./settings/settings.js"

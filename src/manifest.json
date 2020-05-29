@@ -1,9 +1,9 @@
 {
   "lang": "pt-br",
   "dir": "ltr",
-  "name": "valmor.net.br",
+  "name": "Armazem Arvore da Vida",
   "description": "The ultimate futuristic app from the future!",
-  "short_name": "valmor.net.br",
+  "short_name": "av",
   "icons": [{
     "src": "./assets/icons/rocket.png",
     "type": "image/png",

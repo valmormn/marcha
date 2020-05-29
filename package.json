@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "dev boilerplate",
   "main": "main.js",
-  "type": "module",
   "scripts": {
     "babel": "npx babel src --out-dir dist",
     "build": "node ./scripts/build.js",
@@ -45,6 +44,7 @@
     "async-es": "^2.6.3",
     "babylonjs": "^4.0.3",
     "bootstrap": "^4.3.1",
+    "esm": "^3.2.25",
     "highlight.js": "^9.15.10",
     "jquery": "^3.4.1",
     "jspdf": "^1.5.3",

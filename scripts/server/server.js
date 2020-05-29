@@ -31,4 +31,4 @@ var app = express()
 
 // module.exports = "asdasdasd";
 
-// exports.wtf = "wtf";
+exports.wtf = "wtf";

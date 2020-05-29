@@ -1,14 +1,16 @@
 {
   "name": "name",
   "homepage": "http://nodemon.io",
+  "restartable": "rs",
   "verbose": true,
   "delay": "2",
-  "ignore": ["*.test.js", "dist"],
+  "ignore": ["*.test.js", "dist", "node_modules", ".git"],
   "watch": ["src"],
   "execMap": {
-    "js": "rollup -c",
-    "jsx": "",
     "ts": "tsc src/**/*",
-    "scss": "npm run css"
+    "jsx": "",
+    "js": "rollup -c",
+    "scss": "npm run css",
+    "html": ""
   }
 }

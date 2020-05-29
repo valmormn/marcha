@@ -3,7 +3,7 @@
 (function (factory) {
 	typeof define === 'function' && define.amd ? define(factory) :
 	factory();
-}((function () { 'use strict';
+}(function () { 'use strict';
 
 	var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -21162,7 +21162,6 @@
 	Popper.Utils = (typeof window !== 'undefined' ? window : global$2).PopperUtils;
 	Popper.placements = placements;
 	Popper.Defaults = Defaults;
-	//# sourceMappingURL=popper.js.map
 
 	var bootstrap = createCommonjsModule(function (module, exports) {
 	/*!
@@ -22050,6 +22049,8 @@
 	          event.preventDefault();
 	          this.next();
 	          break;
+
+	        default:
 	      }
 	    };
 
@@ -25594,7 +25595,7 @@
 	  Object.defineProperty(exports, '__esModule', { value: true });
 
 	}));
-	//# sourceMappingURL=bootstrap.js.map
+
 	});
 
 	unwrapExports(bootstrap);
@@ -25828,4 +25829,4 @@
 	}();
 	console.log("🔥");
 
-})));
+}));
