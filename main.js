@@ -29,7 +29,6 @@ let fuckthatshit = () => {
 try {
   // a path we KNOW is totally bogus and not a module
   //  require('./apps/npm-debug.log/app.js')
-
   fuckthatshit()
 } catch (e) {
   console.log("oh no big error")

@@ -21,7 +21,7 @@ window.v = {
   // style: style
   yeah: () => {
     console.log("╭∩╮( ͡° ͜ʖ ͡° ͜)╭∩╮")
-  },
+  }
   // aee: aee()
 }
 
@@ -40,8 +40,7 @@ window.v = {
       ;(() => {
         // console.log('🐧'); // ⚡⚡⚡
       })()
-
-      // console.log('( ͡°👅 ͡°)');
+      console.log("( ͡°👅 ͡°)")
 
       // setup();
 
@@ -51,5 +50,4 @@ window.v = {
     false
   )
 })()
-
 console.log("🔥")

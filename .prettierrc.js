@@ -1,11 +1,13 @@
 // prettier.config.js or .prettierrc.js
 
 module.exports = {
-  trailingComma: "none",
   useTabs: false,
   tabWidth: 2,
+  printWidth: 120,
+  trailingComma: "none",
   semi: false,
-  arrowParens: "avoid",
   singleQuote: false,
-  jsxSingleQuote: false
+  jsxSingleQuote: false,
+  arrowParens: "avoid",
+  parser: "flow"
 }

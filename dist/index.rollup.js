@@ -21162,6 +21162,7 @@
 	Popper.Utils = (typeof window !== 'undefined' ? window : global$2).PopperUtils;
 	Popper.placements = placements;
 	Popper.Defaults = Defaults;
+	//# sourceMappingURL=popper.js.map
 
 	var bootstrap = createCommonjsModule(function (module, exports) {
 	/*!
@@ -25595,7 +25596,7 @@
 	  Object.defineProperty(exports, '__esModule', { value: true });
 
 	}));
-
+	//# sourceMappingURL=bootstrap.js.map
 	});
 
 	unwrapExports(bootstrap);
@@ -25821,10 +25822,10 @@
 	    //   hljs.highlightBlock(block);
 	    // });
 	    ;
-	    // setup();
+
+	    console.log("( ͡°👅 ͡°)"); // setup();
 	    // var event = new Event("app-loaded")
 	    // document.dispatchEvent(event)
-
 	  }, false);
 	}();
 	console.log("🔥");
