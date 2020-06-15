@@ -15,7 +15,7 @@ document.addEventListener("header", () => {
     var event = new CustomEvent("pageScan", {
       detail: "pageScan",
       bubbles: true,
-      cancelable: false,
+      cancelable: false
     })
     setTimeout(() => {
       login.dispatchEvent(event)
@@ -29,7 +29,7 @@ document.addEventListener("header", () => {
     // console.log(halfmoon)
     let component = {
       target: "main",
-      path: "app/page/about/about.html",
+      path: "app/page/about/about.html"
     }
     console.log("click halfmoon")
     // window.history.pushState({}, "auth", "  ?=auth");
@@ -39,6 +39,6 @@ document.addEventListener("header", () => {
 
 export let header = {
   id: "header",
-  path: "app/layout/header/header.js",
+  path: "app/layout/header/header.js"
   // afterLoad: afterLoad(),
 }

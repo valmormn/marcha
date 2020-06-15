@@ -1,22 +1,22 @@
 // main.js
 
-// var fs = require("fs");
-const fs = require("fs-extra")
+// var fs = require("fs")
+// const fs = require("fs-extra")
 const chalk = require("chalk")
 
-const chokidar = require("chokidar")
-const exec = require("child_process")
+// const chokidar = require("chokidar")
+// const exec = require("child_process")
 
-// var sass = require("node-sass");
-// var browserify = require("browserify");
-// var babelify = require("babelify");
+// var sass = require("node-sass")
+// var browserify = require("browserify")
+// var babelify = require("babelify")
 
 // let server = require("./scripts/server/server.js")
 
-chokidar.watch("./src").on("all", (event, path) => {
-  console.log(event, path)
-  // clear();
-})
+// chokidar.watch("./src").on("all", (event, path) => {
+// console.log(event, path)
+// clear()
+// })
 
 let fuckthatshit = () => {
   // Watch changes in src directory
@@ -44,28 +44,28 @@ try {
 // nodemon
 
 // Combine styled and normal strings
-// let x = "Running ./main.js"
-// const log = console.log
-// log(chalk.blue(x) + chalk.red("!"))
-// log(chalk.blue.bgRed.bold("Hello world!"))
-// log(chalk.blue("Hello", "World!", "Foo", "bar", "biz", "baz"))
-// log(chalk.red("Hello", chalk.underline.bgBlue("world") + "!"))
+let x = "Running ./main.js"
+const log = console.log
+log(chalk.blue(x) + chalk.red("!"))
+log(chalk.blue.bgRed.bold("Hello world!"))
+log(chalk.blue("Hello", "World!", "Foo", "bar", "biz", "baz"))
+log(chalk.red("Hello", chalk.underline.bgBlue("world") + "!"))
 
 // With async/await:
-async function html() {
-  try {
-    await fs.copy("./src/**/*.html", "dist/").then(() => {
-      console.log("success!")
-    })
+// async function html() {
+//   try {
+//     await fs.copy("./src/**/*.html", "dist/").then(() => {
+//       console.log("success!")
+//     })
 
-    console.log("html")
+//     console.log("html")
 
-    console.log("success!")
-  } catch (err) {
-    console.log("fuck that shit!")
-    console.error(err)
-  }
-}
+//     console.log("success!")
+//   } catch (err) {
+//     console.log("fuck that shit!")
+//     console.error(err)
+//   }
+// }
 
 // html()
 

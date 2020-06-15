@@ -11,10 +11,10 @@ import "@babel/polyfill"
 // import * as async from "async-es"
 // console.log(async)
 
-import jquery from "jquery"
-window.$ = window.jQuery = jquery
-import { popper } from "popper.js"
-import "bootstrap"
+// import jquery from "jquery"
+// window.$ = window.jQuery = jquery
+// import { popper } from "popper.js"
+// import "bootstrap"
 
 // import * as Rx from "rxjs/Observable"
 // console.log(Rx)
@@ -33,5 +33,5 @@ import "bootstrap"
 // synth.triggerAttackRelease("C4", "8n")
 
 export let imports = {
-  id: "imports",
+  id: "imports"
 }

@@ -1,26 +1,25 @@
 // signup
 
-import { signupFormSubmit } from "./signupFormSubmit.js.js";
+import { signupFormSubmit } from "./signupFormSubmit.js"
 
 document.addEventListener("signupComponent", () => {
   // //console.log('xerecao');
-  setTimeout( async () => {
+  setTimeout(async () => {
     // //console.log('xerecao2');
-    let usernameInput = document.querySelector("#Inputusername1");
+    let usernameInput = document.querySelector("#Inputusername1")
     let userNameInputHandler = async () => {
-      
-      usernameInput.addEventListener("keyup", (e)=>{
+      usernameInput.addEventListener("keyup", e => {
         //console.log(e);
-        return false;
-      });
+        return false
+      })
 
-      usernameInput.addEventListener("blur",  (e)=>{
-        e.preventDefault();
-        e.stopPropagation();
+      usernameInput.addEventListener("blur", e => {
+        e.preventDefault()
+        e.stopPropagation()
         //console.log(e);
-        
+
         //console.log('verificar se o username está disponível');
-        // se não passar no teste de validação emitir aviso e bloquear 
+        // se não passar no teste de validação emitir aviso e bloquear
         async function validateUsernameInput(usernameInput) {
           //console.log(usernameInput);
 
@@ -31,37 +30,34 @@ document.addEventListener("signupComponent", () => {
             // const someValue = await getSomeValue();
             // doSomethingWith(someValue);
             //console.log(usernameInput);
-            document.getElementById("btnSignUpFormSubmit").disabled = false;
+            document.getElementById("btnSignUpFormSubmit").disabled = false
 
             // if (error) { throw "fuck"; }
-
           } catch (error) {
             //console.error(error);
-            usernameInput.className += " is-invalid";
-            document.getElementById("btnSignUpFormSubmit").disabled = true;
+            usernameInput.className += " is-invalid"
+            document.getElementById("btnSignUpFormSubmit").disabled = true
           } finally {
             //console.log('finally');
           }
-
         }
 
-        validateUsernameInput(usernameInput);
-      // })
+        validateUsernameInput(usernameInput)
+        // })
 
-      
-      return false;
-      });
-    };
-    await userNameInputHandler();
+        return false
+      })
+    }
+    await userNameInputHandler()
 
-    let emailInput = document.querySelector("#InputEmail1");
-    emailInput.addEventListener("blur",  (e)=>{
-      e.preventDefault();
-      e.stopPropagation();
+    let emailInput = document.querySelector("#InputEmail1")
+    emailInput.addEventListener("blur", e => {
+      e.preventDefault()
+      e.stopPropagation()
       //console.log(e);
-      
+
       //console.log('verificar se o email está disponível');
-      // se não passar no teste de validação emitir aviso e bloquear 
+      // se não passar no teste de validação emitir aviso e bloquear
       async function validateEmailInput(emailInput) {
         //console.log(emailInput);
 
@@ -72,35 +68,32 @@ document.addEventListener("signupComponent", () => {
           // const someValue = await getSomeValue();
           // doSomethingWith(someValue);
           //console.log(emailInput);
-          document.getElementById("btnSignUpFormSubmit").disabled = false;
+          document.getElementById("btnSignUpFormSubmit").disabled = false
 
           // if (error) { throw "fuck"; }
-
         } catch (error) {
           //console.error(error);
-          emailInput.className += " is-invalid";
-          document.getElementById("btnSignUpFormSubmit").disabled = true;
+          emailInput.className += " is-invalid"
+          document.getElementById("btnSignUpFormSubmit").disabled = true
         } finally {
           // //console.log('finally');
         }
-
       }
 
-      validateEmailInput(emailInput);
-    // })
+      validateEmailInput(emailInput)
+      // })
 
-    
-    return false;
-    });
+      return false
+    })
 
-    let passInput = document.querySelector("#InputPassword1");
-    passInput.addEventListener("blur",  (e)=>{
-      e.preventDefault();
-      e.stopPropagation();
+    let passInput = document.querySelector("#InputPassword1")
+    passInput.addEventListener("blur", e => {
+      e.preventDefault()
+      e.stopPropagation()
       //console.log(e);
-      
+
       //console.log('verificar se o username está disponível');
-      // se não passar no teste de validação emitir aviso e bloquear 
+      // se não passar no teste de validação emitir aviso e bloquear
       async function validatePassInput(passInput) {
         //console.log(passInput);
 
@@ -111,35 +104,32 @@ document.addEventListener("signupComponent", () => {
           // const someValue = await getSomeValue();
           // doSomethingWith(someValue);
           //console.log(passInput);
-          document.getElementById("btnSignUpFormSubmit").disabled = false;
+          document.getElementById("btnSignUpFormSubmit").disabled = false
 
           // if (error) { throw "fuck"; }
-
         } catch (error) {
           //console.error(error);
-          passInput.className += " is-invalid";
-          document.getElementById("btnSignUpFormSubmit").disabled = true;
+          passInput.className += " is-invalid"
+          document.getElementById("btnSignUpFormSubmit").disabled = true
         } finally {
           //console.log('finally');
         }
-
       }
 
-      validatePassInput(passInput);
-    // })
+      validatePassInput(passInput)
+      // })
 
-    
-    return false;
-    });
+      return false
+    })
 
-    let passConfirmationInput = document.querySelector("#InputPassword2");
-    passConfirmationInput.addEventListener("blur",  (e)=>{
-      e.preventDefault();
-      e.stopPropagation();
+    let passConfirmationInput = document.querySelector("#InputPassword2")
+    passConfirmationInput.addEventListener("blur", e => {
+      e.preventDefault()
+      e.stopPropagation()
       //console.log(e);
-      
+
       //console.log('verificar se o username está disponível');
-      // se não passar no teste de validação emitir aviso e bloquear 
+      // se não passar no teste de validação emitir aviso e bloquear
       async function validateUsernameInput(usernameInput) {
         //console.log(usernameInput);
 
@@ -150,31 +140,28 @@ document.addEventListener("signupComponent", () => {
           // const someValue = await getSomeValue();
           // doSomethingWith(someValue);
           //console.log(usernameInput);
-          document.getElementById("btnSignUpFormSubmit").disabled = false;
+          document.getElementById("btnSignUpFormSubmit").disabled = false
 
           // if (error) { throw "fuck"; }
-
         } catch (error) {
           //console.error(error);
-          usernameInput.className += " is-invalid";
-          document.getElementById("btnSignUpFormSubmit").disabled = true;
+          usernameInput.className += " is-invalid"
+          document.getElementById("btnSignUpFormSubmit").disabled = true
         } finally {
           //console.log('finally');
         }
-
       }
 
-      validateUsernameInput(usernameInput);
-    // })
+      validateUsernameInput(usernameInput)
+      // })
 
-    
-    return false;
-    });
+      return false
+    })
 
-    let btnSignUpFormSubmit = document.getElementById("btnSignUpFormSubmit");
-    btnSignUpFormSubmit.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+    let btnSignUpFormSubmit = document.getElementById("btnSignUpFormSubmit")
+    btnSignUpFormSubmit.addEventListener("click", e => {
+      e.preventDefault()
+      e.stopPropagation()
       // //console.log(e);
 
       //console.log('enviar pedido de registro pro servidor e tratar retorno');
@@ -183,7 +170,7 @@ document.addEventListener("signupComponent", () => {
       //console.log(passInput.value);
       //console.log(passConfirmationInput.value);
 
-      let processor = "/app/auth/signup/signup.pdo.php";
+      let processor = "/app/auth/signup/signup.pdo.php"
       // let processor = "/app/auth/signup/signup.medoo.php";
 
       let data = {
@@ -194,23 +181,22 @@ document.addEventListener("signupComponent", () => {
           email: emailInput.value,
           pass: passConfirmationInput.value
         }
-      };
+      }
 
-      let inputform = "signup-form";
+      let inputform = "signup-form"
       // Registrar dados no servidor
-      signupFormSubmit(inputform, processor);
+      signupFormSubmit(inputform, processor)
 
       // Se tudo der certo logar o usuário e avisar sobre o email de confirmação
 
-
-      return false;
-    });
+      return false
+    })
 
     // window.renderXX("main", window.route.signup, () => {
     //   //console.log('ta foda');
     // });
-  }, 100);
-});
+  }, 100)
+})
 
 document.addEventListener("DOMContentLoaded", () => {
   //console.log('signupComponent');
@@ -218,8 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
     name: "signupComponent",
     title: "signup",
     path: "/app/auth/signup/signup.html"
-  };
-
+  }
 })
 
 export let signup = {

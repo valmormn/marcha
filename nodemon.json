@@ -9,7 +9,7 @@
   "execMap": {
     "ts": "tsc src/**/*",
     "jsx": "",
-    "js": "rollup -c",
+    "js": "rollup -c ./src/index.js",
     "scss": "npm run css",
     "html": ""
   }

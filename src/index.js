@@ -25,6 +25,9 @@ window.v = {
   // aee: aee()
 }
 
+window._$ = window.v
+window.ƒ = window.v
+
 !(function() {
   document.addEventListener(
     "DOMContentLoaded",

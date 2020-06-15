@@ -26,5 +26,5 @@ let sendEvent = async (name, detail) => {
 
 export let events = {
   id: "events",
-  sendEvent: sendEvent,
+  sendEvent: sendEvent
 }

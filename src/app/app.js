@@ -1,6 +1,8 @@
 // app.js
 
 import { layout } from "./layout/layout.js"
+import { user } from "./user/user"
+import { shop } from "./shop/shop"
 
 // const e = React.createElement;
 
@@ -34,9 +36,13 @@ document.addEventListener("app", () => {
 
 export let app = {
   id: "app",
+  layout: layout,
+  shop: shop,
+  user: user,
+
   f: () => {
     console.log("inside app.js!")
-  },
+  }
 }
 
 export default "hello world!"

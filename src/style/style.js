@@ -1,5 +1,5 @@
 // style
 
 export let style = {
-  id: "style",
+  id: "style"
 }

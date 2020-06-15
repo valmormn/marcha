@@ -24,5 +24,5 @@ window.range = (start, end, step = 1) => {
 
 export let core = {
   id: "core",
-  js: js,
+  js: js
 }
