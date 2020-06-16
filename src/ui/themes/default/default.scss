@@ -1,0 +1,23 @@
+/* default */
+
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 18px;
+
+// Typography
+
+--font-sans-serif {
+}
+
+--font-serif {
+}
+
+--font-mono {
+}
+
+html {
+  line-height: 1.15;
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+}

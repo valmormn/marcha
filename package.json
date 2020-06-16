@@ -6,7 +6,7 @@
   "scripts": {
     "babel": "npx babel src --out-dir dist",
     "build": "node ./scripts/build.js",
-    "deploy": "echo syncronize dist with server trough scp",
+    "deploy": "rsync -ahrv --update --exclude node_modules/ -e ssh ./dist/* v@192.168.0.111:/var/www/html",
     "dev_": "node ./scripts/dev.js",
     "dev": "npm run html && npm run php && sass src:dist && npm run rollup",
     "etaporra": "echo \"eta porra!\"",
