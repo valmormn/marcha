@@ -853,7 +853,7 @@
           switch (_context.prev = _context.next) {
             case 0:
               // // console.log("Escaneando a página em busca de elementos com a classe 'render'");
-              elements2Render = Array.from(document.querySelectorAll("[data-render]"));
+              elements2Render = Array.from(document.querySelectorAll(".render"));
 
               if (elements2Render.length > 0) {
                 elements2Render.forEach(function (element) {
