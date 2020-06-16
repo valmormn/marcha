@@ -847,17 +847,13 @@
 
   function _scanPage() {
     _scanPage = asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee() {
-      var a, elements2Render;
+      var elements2Render;
       return regenerator.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               // // console.log("Escaneando a página em busca de elementos com a classe 'render'");
-              a = document.querySelectorAll("[data-render]"); // console.log(a)
-
-              elements2Render = [];
-              elements2Render = document.getElementsByClassName("render");
-              elements2Render = Array.from(elements2Render);
+              elements2Render = Array.from(document.querySelectorAll("[data-render]"));
 
               if (elements2Render.length > 0) {
                 elements2Render.forEach(function (element) {
@@ -874,7 +870,7 @@
                 });
               }
 
-            case 5:
+            case 2:
             case "end":
               return _context.stop();
           }
@@ -8142,6 +8138,7 @@
   // shop
   var shop = {
     id: "shop",
+    html: "./shop.html",
     pay: pay
   };
 

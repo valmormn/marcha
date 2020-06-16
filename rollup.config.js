@@ -30,7 +30,7 @@ import livereload from "rollup-plugin-livereload"
 
 let graph = require("rollup-plugin-graph")
 let graphOptions = {
-  prune: true,
+  prune: true
 }
 
 export default {
@@ -45,7 +45,7 @@ export default {
     // umd: The UMD module which often use to target both the Node.js and the browser environments.
     // es: The ES module itself.
     // iife: Which will wrap our bundle within the IIFE (Immediately-Invoked Function Expression) for browser usage.
-    name: "play",
+    name: "play"
   },
   plugins: [
     globals(),
@@ -56,30 +56,29 @@ export default {
     resolve({
       // pass custom options to the resolve plugin
       customResolveOptions: {
-        moduleDirectory: "node_modules",
-      },
+        moduleDirectory: "node_modules"
+      }
     }),
     commonjs(), // prise en charge de require
     resolve({
-      browser: true,
+      browser: true
     }),
     babel({
       extensions: [".js", ".jsx", ".ts"],
       exclude: "node_modules/**", // only transpile our source code
       babelrc: false,
-      // presets: [["babel-preset-env", { modules: false }], "stage-3", "react"],
       presets: [
         [
           "@babel/env",
           {
             loose: true,
-            modules: false,
-          },
-        ],
+            modules: false
+          }
+        ]
       ],
       // plugins: ["external-helpers"],
       // externalHelpers: true,
-      runtimeHelpers: true,
+      runtimeHelpers: true
     }),
     // uglify(),
     // terser(), // minification
@@ -94,14 +93,14 @@ export default {
     // }),
     livereload({
       watch: "dist",
-      verbose: true, // Disable console output
+      verbose: true // Disable console output
 
       // other livereload options
       // https: {
       //   key: fs.readFileSync("keys/agent2-key.pem"),
       //   cert: fs.readFileSync("keys/agent2-cert.pem")
       // }
-    }),
+    })
     // graph(),
     // dev("dist/", { port: 3021 }),
     // html({
@@ -133,5 +132,5 @@ export default {
     // clearScreen,
     // exclude,
     // include
-  },
+  }
 }

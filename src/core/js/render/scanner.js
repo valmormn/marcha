@@ -6,12 +6,7 @@ document.addEventListener("pageScan", e => {
 
 async function scanPage() {
   // // console.log("Escaneando a página em busca de elementos com a classe 'render'");
-  let a = document.querySelectorAll("[data-render]")
-  // console.log(a)
-
-  let elements2Render = []
-  elements2Render = document.getElementsByClassName("render")
-  elements2Render = Array.from(elements2Render)
+  let elements2Render = Array.from(document.querySelectorAll("[data-render]"))
 
   if (elements2Render.length > 0) {
     elements2Render.forEach(element => {
