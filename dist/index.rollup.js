@@ -1,9 +1,7 @@
 
 (function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
-(function (factory) {
-  typeof define === 'function' && define.amd ? define(factory) :
-  factory();
-}((function () { 'use strict';
+(function () {
+  'use strict';
 
   // ajax.js
   // let ajax = {}
@@ -8135,11 +8133,55 @@
     id: "pay"
   };
 
+  // batata
+  var batata = {
+    id: "batata"
+  };
+
+  // cebola
+  var cebola = {
+    id: "cebola"
+  };
+
+  // tomate
+  var carmem = {
+    valor: 5.0,
+    info: "wtf",
+    img: "",
+    un: "kg",
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
+  var tomate = {
+    id: "tomate",
+    carmem: carmem
+  };
+
+  // legumes.js
+  var legumes = {
+    batata: batata,
+    cebola: cebola,
+    tomate: tomate
+  };
+
+  // hortifruti.js
+  var hortifruti = {
+    legumes: legumes
+  };
+
+  // products
+  var products = {
+    id: "products",
+    hortifruti: hortifruti
+  };
+
   // shop
   var shop = {
     id: "shop",
     html: "./shop.html",
-    pay: pay
+    pay: pay,
+    products: products
   };
 
   // app.js
@@ -8212,4 +8254,4 @@
   }();
   console.log("🔥");
 
-})));
+}());

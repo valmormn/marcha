@@ -39,7 +39,7 @@ export default {
   output: {
     // dir: "",
     file: "dist/index.rollup.js",
-    format: "umd",
+    format: "iife",
     // cjs: The CommonJS module that typically targetted for the Node.js environment.
     // amd: The AMD module which usually used in the browser.
     // umd: The UMD module which often use to target both the Node.js and the browser environments.
