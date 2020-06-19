@@ -1,2 +1,12 @@
-// cart
-export let cart = { id: "cart"}
+// showcase
+
+let target =  document.addEventListener("showcase", () => {
+    return document.getElementById("showcase");
+})
+
+
+export let showcase = { 
+    id: "showcase",
+    target: target
+
+}

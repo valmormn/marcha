@@ -8306,12 +8306,22 @@
     hortifruti: hortifruti
   };
 
+  // showcase
+  var target = document.addEventListener("showcase", function () {
+    return document.getElementById("showcase");
+  });
+  var showcase = {
+    id: "showcase",
+    target: target
+  };
+
   // shop
   var shop = {
     id: "shop",
     html: "./shop.html",
     pay: pay,
-    products: products
+    products: products,
+    showcase: showcase
   };
 
   // app.js
