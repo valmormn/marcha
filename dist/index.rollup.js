@@ -1,5 +1,3 @@
-
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 (function () {
   'use strict';
 
@@ -8133,14 +8131,135 @@
     id: "pay"
   };
 
+  // limao.js
+  var haiti = {
+    valor: 5.0,
+    info: "wtf",
+    img: "",
+    un: "kg",
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
+  var limao = {
+    id: "batata",
+    haiti: haiti
+  };
+
+  // limao.js
+  var prata = {
+    valor: 5.0,
+    info: "wtf",
+    img: "",
+    un: "dz",
+    price: function price() {
+      // console.log(valor + " " + un)
+      console.log("fuck");
+    },
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
+  var banana = {
+    id: "batata",
+    prata: prata
+  };
+
+  // limao.js
+  var seleta = {
+    valor: 9.0,
+    info: "wtf",
+    img: "",
+    un: "dz",
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
+  var bahia = {
+    valor: 9.0,
+    info: "wtf",
+    img: "",
+    un: "dz",
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
+  var laranja = {
+    id: "laranja",
+    seleta: seleta,
+    bahia: bahia
+  };
+
+  // limao.js
+  var papaya = {
+    valor: 2.0,
+    info: "wtf",
+    img: "",
+    un: "un",
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
+  var mamao = {
+    id: "mamao",
+    papaya: papaya
+  };
+
+  // limao.js
+  var pokan = {
+    valor: 8.0,
+    info: "wtf",
+    img: "",
+    un: "dz",
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
+  var tangerina = {
+    id: "tangerina",
+    pokan: pokan
+  };
+
+  // frutas.js
+
+  var frutas = {
+    id: frutas,
+    limao: limao,
+    banana: banana,
+    laranja: laranja,
+    mamao: mamao,
+    tangerina: tangerina
+  };
+
   // batata
+  // tomate
+  var inglesa = {
+    valor: 7.0,
+    info: "wtf",
+    img: "",
+    un: "kg",
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
   var batata = {
-    id: "batata"
+    id: "batata",
+    inglesa: inglesa
   };
 
   // cebola
+  var comum = {
+    valor: 7.0,
+    info: "wtf",
+    img: "",
+    un: "kg",
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
   var cebola = {
-    id: "cebola"
+    id: "cebola",
+    comum: comum
   };
 
   // tomate
@@ -8153,9 +8272,19 @@
       console.log("projection");
     }
   };
+  var italiano = {
+    valor: 5.0,
+    info: "wtf",
+    img: "",
+    un: "kg",
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
   var tomate = {
     id: "tomate",
-    carmem: carmem
+    carmem: carmem,
+    italiano: italiano
   };
 
   // legumes.js
@@ -8167,7 +8296,8 @@
 
   // hortifruti.js
   var hortifruti = {
-    legumes: legumes
+    legumes: legumes,
+    frutas: frutas
   };
 
   // products

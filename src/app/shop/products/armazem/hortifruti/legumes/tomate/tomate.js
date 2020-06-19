@@ -10,7 +10,18 @@ let carmem = {
   }
 }
 
+let italiano = {
+  valor: 5.0,
+  info: "wtf",
+  img: "",
+  un: "kg",
+  projection: () => {
+    console.log("projection")
+  }
+}
+
 export let tomate = {
   id: "tomate",
-  carmem: carmem
+  carmem: carmem,
+  italiano: italiano
 }

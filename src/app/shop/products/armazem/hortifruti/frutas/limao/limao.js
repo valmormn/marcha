@@ -1,7 +1,8 @@
-// cebola
+// limao.js
 
-let comum = {
-    valor: 7.0,
+
+let haiti = {
+    valor: 5.0,
     info: "wtf",
     img: "",
     un: "kg",
@@ -9,8 +10,8 @@ let comum = {
       console.log("projection")
     }
   }
-
-export let cebola = { 
-    id: "cebola",
-    comum: comum
+  
+export let limao = { 
+    id: "batata",
+    haiti: haiti
 }

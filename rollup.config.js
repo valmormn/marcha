@@ -91,16 +91,16 @@ export default {
     // browserSync({
     //   proxy: "localhost:17365"
     // }),
-    livereload({
-      watch: "dist",
-      verbose: true // Disable console output
+    // livereload({
+    //   watch: "dist",
+    //   verbose: true // Disable console output
 
-      // other livereload options
-      // https: {
-      //   key: fs.readFileSync("keys/agent2-key.pem"),
-      //   cert: fs.readFileSync("keys/agent2-cert.pem")
-      // }
-    })
+    //   // other livereload options
+    //   // https: {
+    //   //   key: fs.readFileSync("keys/agent2-key.pem"),
+    //   //   cert: fs.readFileSync("keys/agent2-cert.pem")
+    //   // }
+    // })
     // graph(),
     // dev("dist/", { port: 3021 }),
     // html({
