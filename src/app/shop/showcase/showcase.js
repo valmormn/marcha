@@ -21,17 +21,21 @@
 
         let bat = "batata"
         console.log(legumes[bat]["inglesa"])
+        console.log(legumes[bat]["inglesa"].valor)
 
         let div = `<div></div>`
+        div.innerHTML = `<p>asdasdsa</p>`
 
-        var getKeys = function(obj) {
+        var getKeys = obj => {
           var keys = []
           for (var key in obj) {
             keys.push(key)
           }
           return keys
         }
-        let showcaseHTML = ""
+
+        //
+        let showcaseHTML = div
         return showcaseHTML
       }
 

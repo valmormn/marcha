@@ -8321,8 +8321,12 @@
         console.log(legumes);
         var bat = "batata";
         console.log(legumes[bat]["inglesa"]);
+        console.log(legumes[bat]["inglesa"].valor);
+        var div = "<div></div>";
+        div.innerHTML = "<p>asdasdsa</p>";
 
-        var showcaseHTML = "";
+
+        var showcaseHTML = div;
         return showcaseHTML;
       };
 
