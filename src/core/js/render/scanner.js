@@ -18,7 +18,7 @@ async function scanPage() {
       })
       setTimeout(() => {
         element.dispatchEvent(event)
-      }, 10)
+      }, 30)
     })
   } else {
     // // console.log("nada para carregar por enquanto")

@@ -16,7 +16,7 @@ export let renderEngine = async (e, callback) => {
     method: "GET",
     headers: myHeaders,
     mode: "cors",
-    cache: "default",
+    cache: "default"
   }
 
   await fetch(e.target.dataset.path, myInit)
@@ -44,17 +44,17 @@ export let renderEngine = async (e, callback) => {
       var loadComponentJS = new CustomEvent(e.srcElement.id, {
         detail: "loadComponentJS",
         bubbles: true,
-        cancelable: false,
+        cancelable: false
       })
 
-      setTimeout(document.dispatchEvent(loadComponentJS), 10)
+      setTimeout(document.dispatchEvent(loadComponentJS), 50)
     })
     .then(async () => {
       // escaneia a pagina de novo
       var pageScanEvent = new CustomEvent("pageScan", {
         detail: "pageScan",
         bubbles: true,
-        cancelable: false,
+        cancelable: false
       })
 
       setTimeout(document.dispatchEvent(pageScanEvent), 100)

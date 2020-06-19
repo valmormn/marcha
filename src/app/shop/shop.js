@@ -2,7 +2,7 @@
 
 import { pay } from "./pay/pay.js"
 import { products } from "./products/products"
-import { showcase } from "./showcase/showcase";
+import { showcase } from "./showcase/showcase"
 
 export let shop = {
   id: "shop",

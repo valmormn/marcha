@@ -1,3 +1,5 @@
+
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 (function () {
   'use strict';
 
@@ -862,7 +864,7 @@
                   });
                   setTimeout(function () {
                     element.dispatchEvent(event);
-                  }, 10);
+                  }, 30);
                 });
               }
 
@@ -992,7 +994,7 @@
                           bubbles: true,
                           cancelable: false
                         });
-                        setTimeout(document.dispatchEvent(loadComponentJS), 10);
+                        setTimeout(document.dispatchEvent(loadComponentJS), 50);
 
                       case 2:
                       case "end":
@@ -8307,12 +8309,36 @@
   };
 
   // showcase
-  var target = document.addEventListener("showcase", function () {
-    return document.getElementById("showcase");
-  });
+  !function () {
+    document.addEventListener("DOMContentLoaded", function () {
+      var mountProductsWall = function mountProductsWall() {
+        //
+        console.log("mount product wall");
+        var productWall = document.getElementById("product-wall");
+        var items = window.v.app.shop.products.hortifruti;
+        console.log(items);
+        var legumes = items.legumes;
+        console.log(legumes);
+        var bat = "batata";
+        console.log(legumes[bat]["inglesa"]);
+
+        var showcaseHTML = "";
+        return showcaseHTML;
+      };
+
+      document.addEventListener("showcase", function () {
+        // console.log("showcase")
+        var showcase = document.getElementById("showcase"); // console.log(showcase)
+
+        var showcaseHTML = mountProductsWall();
+        showcase.innerHTML = showcaseHTML;
+      });
+    }, false);
+  }(); // docu
+
   var showcase = {
-    id: "showcase",
-    target: target
+    id: "showcase" // target: target
+
   };
 
   // shop
