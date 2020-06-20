@@ -1,5 +1,3 @@
-
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 (function () {
   'use strict';
 
@@ -8038,7 +8036,7 @@
                 switch (_context.prev = _context.next) {
                   case 0:
                     _context.next = 2;
-                    return window.renderXX("main", window.route.login, function () {//
+                    return window.renderXX("content", window.route.login, function () {//
                       // console.log("ta foda")
                     });
 
@@ -8052,7 +8050,7 @@
               }
             }, _callee);
           })));
-        }, 1000);
+        }, 100);
       });
     });
   };
@@ -8100,6 +8098,7 @@
   });
   var footer = {
     id: "footer",
+    html: "app/layout/footer/footer.html",
     path: "/app/layout/footer/footer.js",
     afterLoad: afterLoad$1()
   };
@@ -8308,41 +8307,36 @@
     hortifruti: hortifruti
   };
 
+  // showcaseWall.js
+  var _mount = function mount() {
+    //
+    console.log("mount product wall");
+    var productWall = document.getElementById("product-wall"); // let items = window.v.app.shop.products.hortifruti
+  };
+
+  var showcaseWall = {
+    mount: function mount() {
+      _mount();
+    }
+  }; //
+
   // showcase
   !function () {
     document.addEventListener("DOMContentLoaded", function () {
-      var mountProductsWall = function mountProductsWall() {
-        //
-        console.log("mount product wall");
-        var productWall = document.getElementById("product-wall");
-        var items = window.v.app.shop.products.hortifruti;
-        console.log(items);
-        var legumes = items.legumes;
-        console.log(legumes);
-        var bat = "batata";
-        console.log(legumes[bat]["inglesa"]);
-        console.log(legumes[bat]["inglesa"].valor);
-        var div = "<div></div>";
-        div.innerHTML = "<p>asdasdsa</p>";
-
-
-        var showcaseHTML = div;
-        return showcaseHTML;
-      };
-
       document.addEventListener("showcase", function () {
         // console.log("showcase")
+        showcaseWall.mount();
         var showcase = document.getElementById("showcase"); // console.log(showcase)
-
-        var showcaseHTML = mountProductsWall();
-        showcase.innerHTML = showcaseHTML;
+        // let showcaseHTML = mountProductsWall()
+        // showcase.innerHTML = showcaseHTML
       });
     }, false);
-  }(); // docu
+  }(); //
 
   var showcase = {
-    id: "showcase" // target: target
-
+    id: "showcase",
+    // target: target
+    showcaseWall: showcaseWall
   };
 
   // shop

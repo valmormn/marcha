@@ -2,7 +2,7 @@
 // import { rendererX } from "../../../sys/js/render/renderer";
 
 let afterLoad = () => {
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", () => {
     // console.log('footerComponent');
     // window.route.footer = {
     //   name: "footerComponent",
@@ -29,7 +29,7 @@ let afterLoad = () => {
         // console.log(toggleAuthFooter);
 
         toggleAuthFooter.addEventListener("click", async () => {
-          await window.renderXX("main", window.route.login, () => {
+          await window.renderXX("content", window.route.login, () => {
             //
             // console.log("ta foda")
           })
@@ -38,7 +38,7 @@ let afterLoad = () => {
 
           // window.renderY ("main", window.route.login, ()=>{})
         })
-      }, 1000)
+      }, 100)
     })
   })
 }
@@ -53,7 +53,7 @@ document.addEventListener("footer", () => {
       var event = new CustomEvent("pageScan", {
         detail: "pageScan",
         bubbles: true,
-        cancelable: false,
+        cancelable: false
       })
       setTimeout(() => {
         about.dispatchEvent(event)
@@ -81,6 +81,7 @@ document.addEventListener("footer", () => {
 
 export let footer = {
   id: "footer",
+  html: "app/layout/footer/footer.html",
   path: "/app/layout/footer/footer.js",
-  afterLoad: afterLoad(),
+  afterLoad: afterLoad()
 }

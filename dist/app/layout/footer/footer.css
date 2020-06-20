@@ -1,9 +1,1 @@
-/* footer */
-#footer {
-  padding: 12px 12px 120px 12px;
-  color: #eee;
-  background-color: #333;
-  min-height: 300px;
-}
-
-/*# sourceMappingURL=footer.css.map */
+#footer{padding:12px 12px 120px 12px;color:#eee;background-color:#333;min-height:300px}/*# sourceMappingURL=data:application/json,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../../../src/app/layout/footer/footer.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AACC,QACE,6BACA,WACA,sBACA%22,%22file%22:%22footer.css%22%7D */

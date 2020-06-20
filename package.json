@@ -15,7 +15,7 @@
     "html": "copyfiles -u 1 src/**/*.html dist && copyfiles -u 1 src/*.html dist",
     "md": "echo md files to html",
     "nodemon": "nodemon src 8381",
-    "css": "sass --style=compressed --embed-source-map --update src:dist",
+    "css": "sass --style=compressed --embed-source-map --update src/index.scss dist/index.css --color",
     "sass": "sass --watch src:dist",
     "scss": "sass --style=compressed --embed-source-map --update src/index.scss dist/index.scss.css --color",
     "dart": "sass --watch src:dist",
