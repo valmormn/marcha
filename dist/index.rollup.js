@@ -7967,6 +7967,13 @@
     id: "style"
   };
 
+  // ui.js
+  var ui = {
+    id: "ui",
+    style: style // 
+
+  };
+
   // hearder.js
   document.addEventListener("header", function () {
     // console.log(header)
@@ -8387,6 +8394,7 @@
     author: "Valmor",
     site: "https://www.valmor.net.br/",
     style: style,
+    ui: ui,
     app: app,
     core: core,
     route: {},

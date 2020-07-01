@@ -3,7 +3,8 @@
 
 import { core } from "./core/core.js"
 import { settings } from "./settings/settings.js"
-import { style } from "./style/style.js"
+import { ui } from "./ui/ui";
+import { style } from "./ui/style/style.js"
 import { app } from "./app/app.js"
 
 window.v = {
@@ -11,6 +12,7 @@ window.v = {
   author: "Valmor",
   site: "https://www.valmor.net.br/",
   style: style,
+  ui: ui,
   app: app,
   core: core,
   route: {},

@@ -1,9 +1,61 @@
 doctype html  
-html(lang='pt')  
- head
-   title Pug
- body
-   h1 hello world with pug
-   div.container
-     p pug is very simple!
+html(lang='pt-br')  
+  head
+    title Armazém Árvore da Vida
 
+    meta(charset="utf-8")
+    meta(name="viewport",
+        content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link( rel="stylesheet"
+          href="./assets/vendor/fontawesome/all.min.css")
+    link( rel="stylesheet" 
+          href="assets/vendor/bootstrap/bootstrap.min.css")
+
+    <!--  -->
+    link(rel="stylesheet"
+        href="./index.css")
+
+
+  body
+    h1 hello world with pug
+    div.container
+      p pug is very simple!
+    
+    div#header(
+      class="render"
+      data-path="app/layout/header/header.html"
+    )
+
+    div#main(
+      class="render"
+      data-path="app/layout/main/main.html"
+    )
+
+    div#foter(
+      class="render"
+      data-path="app/layout/foter/foter.html"
+    )
+
+    php#php-buffer(
+      style="display: none;"
+    )
+
+    js(
+      id="js"
+      style="display: none;")
+    
+      noscript
+        Your browser does not support JavaScript!
+
+      //- script.
+        if (typeof module === "object") {
+         window.module = module
+         module = undefined
+        }
+      
+      
+
+      //- script.
+        if (window.module) module = window.module
+
+//- eof
