@@ -1,17 +1,16 @@
 // limao.js
 
-
-let haiti = {
-    valor: 5.0,
-    info: "wtf",
-    img: "",
-    un: "kg",
-    projection: () => {
-      console.log("projection")
-    }
+let thaiti = {
+  tipo: "thaiti",
+  valor: 4.0,
+  info: "wtf",
+  img: "/app/shop/products/armazem/hortifruti/frutas/limao/limao_thaiti.jpg",
+  un: "kg",
+  projection: () => {
+    console.log("projection")
   }
-  
-export let limao = { 
-    id: "batata",
-    haiti: haiti
+}
+
+export let limao = {
+  thaiti: thaiti
 }

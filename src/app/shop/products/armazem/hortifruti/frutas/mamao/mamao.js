@@ -1,17 +1,16 @@
 // limao.js
 
-
 let papaya = {
-    valor: 2.0,
-    info: "wtf",
-    img: "",
-    un: "un",
-    projection: () => {
-      console.log("projection")
-    }
+  tipo: "papaya",
+  valor: 2.0,
+  info: "wtf",
+  img: "/app/shop/products/armazem/hortifruti/frutas/mamao/mamao_papayaB.png",
+  un: "un",
+  projection: () => {
+    console.log("projection")
   }
-  
-export let mamao = { 
-    id: "mamao",
-    papaya: papaya
+}
+
+export let mamao = {
+  papaya: papaya
 }

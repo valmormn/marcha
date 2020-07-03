@@ -3,7 +3,7 @@
 
 import { core } from "./core/core.js"
 import { settings } from "./settings/settings.js"
-import { ui } from "./ui/ui";
+import { ui } from "./ui/ui"
 import { style } from "./ui/style/style.js"
 import { app } from "./app/app.js"
 
@@ -55,4 +55,4 @@ window.ƒ = window.v
     false
   )
 })()
-console.log("🔥")
+console.log("🔥") //

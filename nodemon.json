@@ -4,13 +4,13 @@
   "restartable": "rs",
   "verbose": true,
   "delay": "2",
-  "ignore": ["*.test.js", "dist", "node_modules", ".git"],
+  "ignore": ["*.js", "*.test.js", "dist", "node_modules", ".git"],
   "watch": ["src"],
   "execMap": {
     "ts": "tsc src/**/*",
     "jsx": "",
     "js": "rollup -c ./src/index.js",
     "scss": "npm run css",
-    "html": ""
+    "pug": "pug ./src -o ./dist -P"
   }
 }

@@ -1,17 +1,16 @@
 // limao.js
 
-
 let pokan = {
-    valor: 8.0,
-    info: "wtf",
-    img: "",
-    un: "dz",
-    projection: () => {
-      console.log("projection")
-    }
+  tipo: "pokan",
+  valor: 8.0,
+  info: "wtf",
+  img: "/app/shop/products/armazem/hortifruti/frutas/tangerina/tangerina_pokan.png",
+  un: "dz",
+  projection: () => {
+    console.log("projection")
   }
-  
-export let tangerina = { 
-    id: "tangerina",
-    pokan: pokan
+}
+
+export let tangerina = {
+  pokan: pokan
 }

@@ -10,6 +10,8 @@ import { showcaseWall } from "./showcaseWall"
       document.addEventListener("showcase", () => {
         // console.log("showcase")
 
+        // how to create an array with
+
         showcaseWall.mount()
 
         let showcase = document.getElementById("showcase")

@@ -8140,25 +8140,26 @@
   };
 
   // limao.js
-  var haiti = {
-    valor: 5.0,
+  var thaiti = {
+    tipo: "thaiti",
+    valor: 4.0,
     info: "wtf",
-    img: "",
+    img: "/app/shop/products/armazem/hortifruti/frutas/limao/limao_thaiti.jpg",
     un: "kg",
     projection: function projection() {
       console.log("projection");
     }
   };
   var limao = {
-    id: "batata",
-    haiti: haiti
+    thaiti: thaiti
   };
 
   // limao.js
   var prata = {
+    tipo: "prata",
     valor: 5.0,
     info: "wtf",
-    img: "",
+    img: "/app/shop/products/armazem/hortifruti/frutas/banana/banana_prata.jpg",
     un: "dz",
     price: function price() {
       // console.log(valor + " " + un)
@@ -8169,12 +8170,22 @@
     }
   };
   var banana = {
-    id: "batata",
     prata: prata
   };
 
   // limao.js
   var seleta = {
+    tipo: "seleta",
+    valor: 9.0,
+    info: "wtf",
+    img: "/app/shop/products/armazem/hortifruti/frutas/laranja/laranja_seleta.jpg",
+    un: "dz",
+    projection: function projection() {
+      console.log("projection");
+    }
+  };
+  var bahia = {
+    tipo: "bahia",
     valor: 9.0,
     info: "wtf",
     img: "",
@@ -8183,7 +8194,8 @@
       console.log("projection");
     }
   };
-  var bahia = {
+  var pera = {
+    tipo: "pera",
     valor: 9.0,
     info: "wtf",
     img: "",
@@ -8193,45 +8205,44 @@
     }
   };
   var laranja = {
-    id: "laranja",
     seleta: seleta,
-    bahia: bahia
+    bahia: bahia,
+    pera: pera
   };
 
   // limao.js
   var papaya = {
+    tipo: "papaya",
     valor: 2.0,
     info: "wtf",
-    img: "",
+    img: "/app/shop/products/armazem/hortifruti/frutas/mamao/mamao_papayaB.png",
     un: "un",
     projection: function projection() {
       console.log("projection");
     }
   };
   var mamao = {
-    id: "mamao",
     papaya: papaya
   };
 
   // limao.js
   var pokan = {
+    tipo: "pokan",
     valor: 8.0,
     info: "wtf",
-    img: "",
+    img: "/app/shop/products/armazem/hortifruti/frutas/tangerina/tangerina_pokan.png",
     un: "dz",
     projection: function projection() {
       console.log("projection");
     }
   };
   var tangerina = {
-    id: "tangerina",
     pokan: pokan
   };
 
   // frutas.js
 
   var frutas = {
-    id: frutas,
     limao: limao,
     banana: banana,
     laranja: laranja,
@@ -8309,9 +8320,43 @@
   };
 
   // products
+
+  var list = {
+    laranja: {
+      tipo: "bahia",
+      valor: 9.0,
+      unidade: "dz"
+    }
+  };
+  !function () {
+    document.addEventListener("DOMContentLoaded", function () {
+      // asd
+      window.lista_frutas = [];
+      window.frutas = Object.entries(hortifruti.frutas);
+      window.frutas.forEach(function (v, i) {
+        window.frutas_sub = Object.entries(v[1]); // console.log(window.frutas_sub)
+
+        window.frutas_sub.forEach(function (value, index) {
+          var item = v[0];
+          var subitem = value[0];
+          var name = item + " " + subitem;
+          var valor = value[1].valor;
+          var unidade = value[1].un;
+          var img = value[1].img;
+          var vetor = [name, valor, unidade, img];
+          console.log(vetor);
+          window.lista_frutas.push(vetor);
+        });
+      });
+    }, false);
+  }();
   var products = {
     id: "products",
-    hortifruti: hortifruti
+    hortifruti: hortifruti,
+    lista: list,
+    fuck: function fuck() {
+      console.log("fuck");
+    }
   };
 
   // showcaseWall.js
@@ -8332,6 +8377,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       document.addEventListener("showcase", function () {
         // console.log("showcase")
+        // how to create an array with
         showcaseWall.mount();
         var showcase = document.getElementById("showcase"); // console.log(showcase)
         // let showcaseHTML = mountProductsWall()
@@ -8424,6 +8470,6 @@
       // document.dispatchEvent(event)
     }, false);
   }();
-  console.log("🔥");
+  console.log("🔥"); //
 
 }());

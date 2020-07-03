@@ -1,22 +1,20 @@
 // limao.js
 
-
 let prata = {
-    valor: 5.0,
-    info: "wtf",
-    img: "",
-    un: "dz",
-    price: () => {
-      // console.log(valor + " " + un)
-      console.log("fuck");
-      
-    },
-    projection: () => {
-      console.log("projection")
-    }
+  tipo: "prata",
+  valor: 5.0,
+  info: "wtf",
+  img: "/app/shop/products/armazem/hortifruti/frutas/banana/banana_prata.jpg",
+  un: "dz",
+  price: () => {
+    // console.log(valor + " " + un)
+    console.log("fuck")
+  },
+  projection: () => {
+    console.log("projection")
   }
-  
-export let banana = { 
-    id: "batata",
-    prata: prata
+}
+
+export let banana = {
+  prata: prata
 }

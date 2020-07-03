@@ -6,7 +6,7 @@
   "scripts": {
     "babel": "npx babel src --out-dir dist",
     "build": "node ./scripts/build.js",
-    "deploy2local":"",
+    "deploy2local": "",
     "deploy2web": "deploy2web",
     "dev_": "node ./scripts/dev.js",
     "dev": "npm run html && npm run php && sass src:dist && npm run rollup",
@@ -25,7 +25,7 @@
     "gulp": "echo gulp",
     "php": "copyfiles -u 1 src/*.php dist && copyfiles -u 1 src/**/*.php dist",
     "php-serve-dist": "php -S localhost:10617 ./dist/",
-    "pug": "echo 'go pug!'",
+    "pug": "pug -w ./src -o ./dist -P",
     "push": "git add . && git commit -am \"dev\" && git push",
     "rollup": "rollup -c --watch",
     "node-server": "node scripts/server.js",
