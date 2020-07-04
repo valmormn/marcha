@@ -8331,21 +8331,25 @@
   !function () {
     document.addEventListener("DOMContentLoaded", function () {
       // asd
-      window.lista_frutas = [];
+      window.v.lista_frutas = [];
       window.frutas = Object.entries(hortifruti.frutas);
       window.frutas.forEach(function (v, i) {
         window.frutas_sub = Object.entries(v[1]); // console.log(window.frutas_sub)
 
         window.frutas_sub.forEach(function (value, index) {
           var item = v[0];
+          item = item.charAt(0).toUpperCase() + item.slice(1);
           var subitem = value[0];
+          subitem = subitem.charAt(0).toUpperCase() + subitem.slice(1);
           var name = item + " " + subitem;
           var valor = value[1].valor;
           var unidade = value[1].un;
+          var preco = "R$ " + valor + " / " + unidade;
+          var page = "/app/shop/products/armazem/hortifruti/frutas/" + item + "/" + item + ".html";
           var img = value[1].img;
-          var vetor = [name, valor, unidade, img];
-          console.log(vetor);
-          window.lista_frutas.push(vetor);
+          var vetor = [name, preco, img, page]; // console.log(vetor)
+
+          window.v.lista_frutas.push(vetor);
         });
       });
     }, false);
@@ -8359,11 +8363,109 @@
     }
   };
 
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+  }
+
+  var createClass = _createClass;
+
   // showcaseWall.js
+  !function () {
+    document.addEventListener("DOMContentLoaded", function () {// asd
+      // console.log(window.v.lista_frutas)
+      // mount()
+    }, false);
+  }();
+
   var _mount = function mount() {
     //
-    console.log("mount product wall");
-    var productWall = document.getElementById("product-wall"); // let items = window.v.app.shop.products.hortifruti
+    // console.log("mount product wall")
+    var ProductCard = /*#__PURE__*/function () {
+      function ProductCard(name, price, img) {
+        this.name = name;
+        this.price = price;
+        this.img = img; // this.link = link
+      } //
+
+
+      createClass(ProductCard, [{
+        key: "html",
+        get: function get() {
+          // card
+          var frag = document.createDocumentFragment(); // card.appendChild(document.createElement("div"))
+
+          var card = document.createElement("div");
+          card.className = "card"; // console.log(card)
+          // card/img-top
+
+          var img = document.createElement("img");
+          img.className = "card-img-top";
+          img.src = this.img; // console.log(img)
+
+          card.appendChild(img); // console.log(card)
+          // card/body
+
+          var body = document.createElement("div");
+          body.className = "card-body"; // body/titulo - nome produto
+
+          var title = document.createElement("h5");
+          title.className = "card-title";
+          var titleTxt = this.name;
+          title.innerText = titleTxt;
+          body.appendChild(title); // card-text - price
+
+          var text = document.createElement("p");
+          text.className = "card-text";
+          var cardText = this.price;
+          text.innerText = cardText;
+          body.appendChild(text); // botao comprar
+
+          var btn = document.createElement("button");
+          btn.className = "btn btn-primary btn-block";
+          var btnTxt = "Comprar";
+          btn.innerHTML = btnTxt;
+          body.appendChild(btn); // src/app/shop/products/armazem/hortifruti/frutas/limao/limao_thaiti.jpg
+          // adiciona tudo no body do cartao
+
+          card.appendChild(body); //  ### ERRO ### 
+          // AS IMAGENS NAOS ESTAO SENDO CARREGADAS CORRETAMENTE.alert-dark
+          // e agora retorna o elemento em html todo bunitinho
+
+          return card; // return frag
+        }
+      }]);
+
+      return ProductCard;
+    }(); //
+
+
+    var productWall = document.getElementById("product-wall"); // console.log(productWall)
+
+    var lista = window.v.lista_frutas;
+    lista.forEach(function (v, i) {
+      // console.log(card) // nome do item
+      var name = v[0];
+      var price = v[1];
+      var img = v[2];
+      var cartao = new ProductCard(name, price, img);
+      console.log(cartao.html);
+      productWall.appendChild(cartao.html); // v[0] // nome do item
+      // v[1] // preço
+      // v[2] // imagem
+      // v[3] // link
+    });
   };
 
   var showcaseWall = {

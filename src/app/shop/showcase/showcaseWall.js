@@ -1,36 +1,117 @@
 // showcaseWall.js
 
+!(() => {
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      // asd
+      // console.log(window.v.lista_frutas)
+      // mount()
+    },
+    false
+  )
+})()
+
 let mount = () => {
   //
 
-  console.log("mount product wall")
+  // console.log("mount product wall")
 
+  class ProductCard {
+    constructor(name, price, img) {
+      this.name = name
+      this.price = price
+      this.img = img
+      // this.link = link
+    }
+
+    //
+    get html() {
+      // card
+      let frag = document.createDocumentFragment()
+      // card.appendChild(document.createElement("div"))
+      let card = document.createElement("div")
+      card.className = "card"
+      // console.log(card)
+
+      // card/img-top
+      let img = document.createElement("img")
+      img.className = "card-img-top"
+      img.src = this.img
+
+      // console.log(img)
+
+      card.appendChild(img)
+
+      // console.log(card)
+
+      // card/body
+      let body = document.createElement("div")
+      body.className = "card-body"
+
+      // body/titulo - nome produto
+      let title = document.createElement("h5")
+      title.className = "card-title"
+
+      let titleTxt = this.name
+
+      title.innerText = titleTxt
+
+      body.appendChild(title)
+
+      // card-text - price
+      let text = document.createElement("p")
+      text.className = "card-text"
+
+      let cardText = this.price
+
+      text.innerText = cardText
+      body.appendChild(text)
+
+      // botao comprar
+
+      let btn = document.createElement("button")
+      btn.className = "btn btn-primary btn-block"
+
+      let btnTxt = "Comprar"
+      btn.innerHTML = btnTxt
+
+      body.appendChild(btn)
+
+      // src/app/shop/products/armazem/hortifruti/frutas/limao/limao_thaiti.jpg
+
+      // adiciona tudo no body do cartao
+      card.appendChild(body)
+
+      //  ### ERRO ### 
+      // AS IMAGENS NAOS ESTAO SENDO CARREGADAS CORRETAMENTE.alert-dark
+
+      // e agora retorna o elemento em html todo bunitinho
+      return card
+      // return frag
+    }
+  }
+
+  //
   let productWall = document.getElementById("product-wall")
 
-  // let items = window.v.app.shop.products.hortifruti
-  // console.log(items)
+  // console.log(productWall)
 
-  // let legumes = items.legumes
-  // console.log(legumes)
+  let lista = window.v.lista_frutas
+  lista.forEach((v, i) => {
+    // console.log(card) // nome do item
+    let name = v[0]
+    let price = v[1]
+    let img = v[2]
+    let cartao = new ProductCard(name, price, img)
+    console.log(cartao.html)
 
-  let frutas = [["laranja bahia", "9.00", "dz"]]
-
-  // let bat = "batata"
-  // console.log(legumes["batata"]["inglesa"])
-  // console.log(legumes["batata"]["inglesa"].valor)
-
-  // let div = document.dom
-  // console.log(div)
-
-  // div.innerHTML = `<p>asdasdsa</p>`
-
-  var getKeys = obj => {
-    var keys = []
-    for (var key in obj) {
-      keys.push(key)
-    }
-    return keys
-  }
+    productWall.appendChild(cartao.html)
+    // v[0] // nome do item
+    // v[1] // preço
+    // v[2] // imagem
+    // v[3] // link
+  })
 }
 
 export let showcaseWall = {

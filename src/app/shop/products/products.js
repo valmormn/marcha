@@ -15,7 +15,7 @@ let list = {
     "DOMContentLoaded",
     () => {
       // asd
-      window.lista_frutas = []
+      window.v.lista_frutas = []
 
       window.frutas = Object.entries(hortifruti.frutas)
       window.frutas.forEach((v, i) => {
@@ -24,16 +24,20 @@ let list = {
 
         window.frutas_sub.forEach((value, index) => {
           let item = v[0]
+          item = item.charAt(0).toUpperCase() + item.slice(1)
           let subitem = value[0]
+          subitem = subitem.charAt(0).toUpperCase() + subitem.slice(1)
           let name = item + " " + subitem
           let valor = value[1].valor
           let unidade = value[1].un
+          let preco = "R$ " + valor + " / " + unidade
+          let page = "/app/shop/products/armazem/hortifruti/frutas/" + item + "/" + item + ".html"
           let img = value[1].img
 
-          let vetor = [name, valor, unidade, img]
-          console.log(vetor)
+          let vetor = [name, preco, img, page]
+          // console.log(vetor)
 
-          window.lista_frutas.push(vetor)
+          window.v.lista_frutas.push(vetor)
         })
       })
     },
