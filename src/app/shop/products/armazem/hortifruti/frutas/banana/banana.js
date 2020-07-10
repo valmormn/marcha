@@ -6,6 +6,7 @@ let prata = {
   info: "wtf",
   img: "./app/shop/products/armazem/hortifruti/frutas/banana/banana_prata.jpg",
   un: "dz",
+  estoque: "1",
   price: () => {
     // console.log(valor + " " + un)
     console.log("fuck")

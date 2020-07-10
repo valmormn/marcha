@@ -83,7 +83,7 @@ let mount = () => {
       // adiciona tudo no body do cartao
       card.appendChild(body)
 
-      //  ### ERRO ### 
+      //  ### ERRO ###
       // AS IMAGENS NAOS ESTAO SENDO CARREGADAS CORRETAMENTE.alert-dark
 
       // e agora retorna o elemento em html todo bunitinho
@@ -99,18 +99,16 @@ let mount = () => {
 
   let lista = window.v.lista_frutas
   lista.forEach((v, i) => {
-    // console.log(card) // nome do item
-    let name = v[0]
-    let price = v[1]
-    let img = v[2]
+    // console.log(v) // nome do item
+
+    let name = v[0] // v[0] // nome do item
+    let price = v[1] // v[1] // preço
+    let img = v[2] // v[2] // imagem   // v[3] // link
     let cartao = new ProductCard(name, price, img)
-    console.log(cartao.html)
+
+    // console.log(cartao.html)
 
     productWall.appendChild(cartao.html)
-    // v[0] // nome do item
-    // v[1] // preço
-    // v[2] // imagem
-    // v[3] // link
   })
 }
 

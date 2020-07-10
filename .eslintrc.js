@@ -1,39 +1,38 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "node": true,
-    "es6": true,
+  env: {
+    browser: true,
+    commonjs: true,
+    node: true,
+    es6: true
     // "jquery": true
   },
-  // "extends": "eslint:recommended",
-  "extends": [
+  extends: [
     "eslint:recommended",
     // "plugin:react/recommended",
-    "plugin:prettier/recommended",
+    "plugin:prettier/recommended"
     // "prettier/flowtype",
     // "prettier/react",
     // "prettier/standard",
   ],
-  "globals": {},
-  "parser": "babel-eslint",
+  globals: {},
+  parser: "babel-eslint",
   // "parser": "eslint",
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "ecmaFeatures": {
-      "jsx": true
+  parserOptions: {
+    ecmaVersion: 2018,
+    ecmaFeatures: {
+      jsx: true
     },
-    "sourceType": "module",
+    sourceType: "module",
     // "sourceType": "script",
-    "allowImportExportEverywhere": false,
+    allowImportExportEverywhere: false
     // "codeFrame": true
   },
-  "plugins": [
+  plugins: [
     "babel",
     // "react",
     "prettier"
   ],
-  "rules": {
+  rules: {
     // "strict": 0,
     // "babel/new-cap": 1,
     // "babel/camelcase": 1,
@@ -47,4 +46,4 @@ module.exports = {
     // "react/jsx-uses-react": "error",
     // "react/jsx-uses-vars": "error",
   }
-};
+}

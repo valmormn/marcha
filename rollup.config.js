@@ -84,7 +84,7 @@ export default {
     // terser(), // minification
     // sass(),
     // scss({output: "dist"}), // ERROR - will output compiled styles to bundle.css,
-    serve("dist"),
+    serve("dist")
     // phpServer({
     // port: 17365
     // }),

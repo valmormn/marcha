@@ -1,11 +1,15 @@
-var _this = this;
+var _this = this
 
-function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
+function _newArrowCheck(innerThis, boundThis) {
+  if (innerThis !== boundThis) {
+    throw new TypeError("Cannot instantiate an arrow function")
+  }
+}
 
 // app.js
 // 'use strict';
 // const e = React.createElement;
-console.log('app.js'); // class LikeButton extends React.Component {
+console.log("app.js") // class LikeButton extends React.Component {
 //   constructor(props) {
 //     super(props);
 //     this.state = { liked: false };
@@ -26,9 +30,9 @@ console.log('app.js'); // class LikeButton extends React.Component {
 
 export var app = {
   f: function f() {
-    _newArrowCheck(this, _this);
+    _newArrowCheck(this, _this)
 
-    console.log('inside app.js!');
+    console.log("inside app.js!")
   }.bind(this)
-};
-export default 'hello world!';
+}
+export default "hello world!"

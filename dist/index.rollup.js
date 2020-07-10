@@ -8144,8 +8144,9 @@
     tipo: "thaiti",
     valor: 4.0,
     info: "wtf",
-    img: "/app/shop/products/armazem/hortifruti/frutas/limao/limao_thaiti.jpg",
+    img: "./app/shop/products/armazem/hortifruti/frutas/limao/limao_thaiti.jpg",
     un: "kg",
+    estoque: "1",
     projection: function projection() {
       console.log("projection");
     }
@@ -8161,6 +8162,7 @@
     info: "wtf",
     img: "./app/shop/products/armazem/hortifruti/frutas/banana/banana_prata.jpg",
     un: "dz",
+    estoque: "1",
     price: function price() {
       // console.log(valor + " " + un)
       console.log("fuck");
@@ -8178,8 +8180,9 @@
     tipo: "seleta",
     valor: 9.0,
     info: "wtf",
-    img: "/app/shop/products/armazem/hortifruti/frutas/laranja/laranja_seleta.jpg",
+    img: "./app/shop/products/armazem/hortifruti/frutas/laranja/laranja_seleta.jpg",
     un: "dz",
+    estoque: "1",
     projection: function projection() {
       console.log("projection");
     }
@@ -8190,6 +8193,7 @@
     info: "wtf",
     img: "",
     un: "dz",
+    estoque: "0",
     projection: function projection() {
       console.log("projection");
     }
@@ -8200,6 +8204,7 @@
     info: "wtf",
     img: "",
     un: "dz",
+    estoque: "0",
     projection: function projection() {
       console.log("projection");
     }
@@ -8215,8 +8220,9 @@
     tipo: "papaya",
     valor: 2.0,
     info: "wtf",
-    img: "/app/shop/products/armazem/hortifruti/frutas/mamao/mamao_papayaB.png",
+    img: "./app/shop/products/armazem/hortifruti/frutas/mamao/mamao_papayaB.png",
     un: "un",
+    estoque: "0",
     projection: function projection() {
       console.log("projection");
     }
@@ -8230,8 +8236,9 @@
     tipo: "pokan",
     valor: 8.0,
     info: "wtf",
-    img: "/app/shop/products/armazem/hortifruti/frutas/tangerina/tangerina_pokan.png",
+    img: "./app/shop/products/armazem/hortifruti/frutas/tangerina/tangerina_pokan.png",
     un: "dz",
+    estoque: "1",
     projection: function projection() {
       console.log("projection");
     }
@@ -8334,12 +8341,14 @@
       window.v.lista_frutas = [];
       window.frutas = Object.entries(hortifruti.frutas);
       window.frutas.forEach(function (v, i) {
-        window.frutas_sub = Object.entries(v[1]); // console.log(window.frutas_sub)
-
+        window.frutas_sub = Object.entries(v[1]);
+        console.log(window.frutas_sub);
         window.frutas_sub.forEach(function (value, index) {
-          var item = v[0];
+          var item = v[0]; // 0 = nome do item
+
           item = item.charAt(0).toUpperCase() + item.slice(1);
-          var subitem = value[0];
+          var subitem = value[0]; // 0 = nome do sub_item
+
           subitem = subitem.charAt(0).toUpperCase() + subitem.slice(1);
           var name = item + " " + subitem;
           var valor = value[1].valor;
@@ -8347,9 +8356,14 @@
           var preco = "R$ " + valor + " / " + unidade;
           var page = "/app/shop/products/armazem/hortifruti/frutas/" + item + "/" + item + ".html";
           var img = value[1].img;
+          var estoque = value[1].estoque;
           var vetor = [name, preco, img, page]; // console.log(vetor)
+          // criar a lista de produtos
+          // somente para itens que existam no estoque
 
-          window.v.lista_frutas.push(vetor);
+          if (estoque > 0) {
+            window.v.lista_frutas.push(vetor);
+          }
         });
       });
     }, false);
@@ -8439,7 +8453,7 @@
           body.appendChild(btn); // src/app/shop/products/armazem/hortifruti/frutas/limao/limao_thaiti.jpg
           // adiciona tudo no body do cartao
 
-          card.appendChild(body); //  ### ERRO ### 
+          card.appendChild(body); //  ### ERRO ###
           // AS IMAGENS NAOS ESTAO SENDO CARREGADAS CORRETAMENTE.alert-dark
           // e agora retorna o elemento em html todo bunitinho
 
@@ -8455,16 +8469,16 @@
 
     var lista = window.v.lista_frutas;
     lista.forEach(function (v, i) {
-      // console.log(card) // nome do item
-      var name = v[0];
-      var price = v[1];
-      var img = v[2];
-      var cartao = new ProductCard(name, price, img);
-      console.log(cartao.html);
-      productWall.appendChild(cartao.html); // v[0] // nome do item
-      // v[1] // preço
-      // v[2] // imagem
-      // v[3] // link
+      // console.log(v) // nome do item
+      var name = v[0]; // v[0] // nome do item
+
+      var price = v[1]; // v[1] // preço
+
+      var img = v[2]; // v[2] // imagem   // v[3] // link
+
+      var cartao = new ProductCard(name, price, img); // console.log(cartao.html)
+
+      productWall.appendChild(cartao.html);
     });
   };
 

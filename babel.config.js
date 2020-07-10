@@ -11,14 +11,14 @@ const presets = [
         // firefox: "40",
         // chrome: "47",
         // safari: "7.1",
-        browsers: ["last 3 versions"],
+        browsers: ["last 9 versions"]
       },
       corejs: 3,
       modules: false,
       // useBuiltIns: "usage"
-      useBuiltIns: "false",
-    },
-  ],
+      useBuiltIns: "false"
+    }
+  ]
 ]
 
 const plugins = [
@@ -38,9 +38,9 @@ const plugins = [
       corejs: false,
       helpers: true,
       regenerator: true,
-      useESModules: false,
-    },
-  ],
+      useESModules: false
+    }
+  ]
   // ["@babel/external-helpers"],
 ]
 
@@ -55,12 +55,12 @@ const overrides = [
     test: ["./tests"],
     presets: [
       // config for tests
-    ],
-  },
+    ]
+  }
 ]
 
 module.exports = {
   presets,
   plugins,
-  overrides,
+  overrides
 }

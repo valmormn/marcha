@@ -20,12 +20,12 @@ let list = {
       window.frutas = Object.entries(hortifruti.frutas)
       window.frutas.forEach((v, i) => {
         window.frutas_sub = Object.entries(v[1])
-        // console.log(window.frutas_sub)
+        console.log(window.frutas_sub)
 
         window.frutas_sub.forEach((value, index) => {
-          let item = v[0]
+          let item = v[0] // 0 = nome do item
           item = item.charAt(0).toUpperCase() + item.slice(1)
-          let subitem = value[0]
+          let subitem = value[0] // 0 = nome do sub_item
           subitem = subitem.charAt(0).toUpperCase() + subitem.slice(1)
           let name = item + " " + subitem
           let valor = value[1].valor
@@ -33,11 +33,16 @@ let list = {
           let preco = "R$ " + valor + " / " + unidade
           let page = "/app/shop/products/armazem/hortifruti/frutas/" + item + "/" + item + ".html"
           let img = value[1].img
+          let estoque = value[1].estoque
 
           let vetor = [name, preco, img, page]
           // console.log(vetor)
 
-          window.v.lista_frutas.push(vetor)
+          // criar a lista de produtos
+          // somente para itens que existam no estoque
+          if (estoque > 0) {
+            window.v.lista_frutas.push(vetor)
+          }
         })
       })
     },
